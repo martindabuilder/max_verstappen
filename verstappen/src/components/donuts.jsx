@@ -1,19 +1,17 @@
-import backgroundVideo from "/assets/videos/donuts.mp4";
+import backgroundVideo from "../assets/videos/donuts.mp4";
+import "../Donuts.css";
 
-function HeroBG() {
-    return (
-        <section className = "donuts">
-        <video 
-        autoPlay 
-        loop 
-        muted
-        className = "bg-video">
+function Donuts() {
+  return (
+    <section className="donuts">
+      <video autoPlay loop muted className="bg-video">
+        <source src={backgroundVideo} type="video/mp4" />
+      </video>
 
-            <source src={backgroundVideo} type="video/mp4" />
+      <div className="donuts-content">
+      </div>
+    </section>
+  );
+}
 
-            </video>
-        </section>
-    )
-
-
-} export default HeroBG;
+export default Donuts;
