@@ -1,0 +1,15 @@
+.intro-seq {
+    object-fit: cover;
+    object-position: center;
+
+    color: black;
+    display: flex;
+}
+
+.intro-seq .logo {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    position: fixed;
+    z-index: 1000;
+}
