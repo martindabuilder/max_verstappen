@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+.intro-text-container {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+    color: rgb(234, 230, 149);
+    font-family: 'Space Grotesk', serif;
+    z-index: 10;
+}
+
+.intro-title {
+    white-space: nowrap;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.intro-subtext {
+    white-space: nowrap;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}

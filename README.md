@@ -14,3 +14,6 @@ More animations - [GSAP](https://gsap.com/)
 
 youtube links:
 [developedbyed - Page Transitions](https://www.youtube.com/watch?v=S4HYwsBRpRs)
+
+fonts:
+[Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk?utm_source=chatgpt.com&preview.script=Latn)
