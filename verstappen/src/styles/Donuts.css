@@ -19,12 +19,3 @@
     height: 100%;
     z-index: -1;
 }
-
-.donuts-content {
-    position: relative;
-    z-index: 1;
-    color: white;
-    text-align: center;
-    font-size: 3rem;
-    font-weight: bold;
-}
