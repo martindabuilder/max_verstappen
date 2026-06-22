@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import Donuts from './components/donuts.jsx'
+import Donuts from './components/Donuts.jsx'
 import Intro from './components/Intro.jsx'
 
 import './styles/App.css'

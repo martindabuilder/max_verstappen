@@ -14,7 +14,7 @@ function Donuts() {
         <source src = {backgroundVideo} type = "video/mp4" />
       </video>
       
-      <IntroText />
+        <IntroText />
     </section>
   );
 }
