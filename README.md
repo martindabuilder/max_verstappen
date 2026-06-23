@@ -1,5 +1,5 @@
 # max
-First dip into react.js
+First dip into react and actual animations with css html
 
 Main inspiration was [lando norris' website](https://landonorris.com/) shoutout to the designer fr
 

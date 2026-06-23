@@ -1,4 +1,6 @@
 .scroll-hint{
-    opacity: 0;
-    y: -50; 
+    position: bottom;
+    
+    color:rgb(255, 255, 255);
+    font-family: 'Space Grotesk', sans-serif;
 }

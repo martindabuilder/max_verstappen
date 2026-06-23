@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 
 import Donuts from './components/Donuts.jsx'
 import Intro from './components/Intro.jsx'
-import ScrollHint from './components/ScrollHint.jsx'
 
 
 import './styles/App.css'
@@ -16,6 +15,11 @@ function App() {
       {/* intro portion of the site */}
       <Intro />
       <Donuts />
+    
+      {/* 1st scroll portion of the site */}
+
+      {/* 2nd scroll portion of the site */}
+
     </>
   );
 }

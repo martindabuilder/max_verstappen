@@ -1,8 +1,8 @@
 import backgroundVideo from "../assets/videos/donuts.mp4";
 import "../styles/Donuts.css";
 
-import ScrollHint from "./ScrollHint";
 import IntroText from "./IntroText";
+import ScrollHint from "./ScrollHint";
 
 function Donuts() {
   return (
@@ -14,9 +14,9 @@ function Donuts() {
       className = "bg-video">
         <source src = {backgroundVideo} type = "video/mp4" />
       </video>
-      
-        <IntroText />
+
         <ScrollHint />
+        <IntroText />
     
     </section>
   );
