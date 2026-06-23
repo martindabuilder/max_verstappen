@@ -22,5 +22,11 @@ youtube links:
 [developedbyed - Page Transitions](https://www.youtube.com/watch?v=S4HYwsBRpRs)
 
 fonts:
-[Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk?utm_source=chatgpt.com&preview.script=Latn)
 [Raleway](https://fonts.google.com/specimen/Raleway?utm_source=chatgpt.com&preview.text=Max%20Verstappen&specimen.preview.text=Max+Verstappen)
+[Birthstrone](https://fonts.google.com/specimen/Birthstone?categoryFilters=Feeling:%2FExpressive%2FFancy&preview.script=Latn)
+
+
+rough timeline of the work ive done:
+day 1: mostly setup on the project itself, starting up the react server etc.
+day 2: creating a few of the components, working mostly on the intro section of the site including the video loop alongside text animation etc.
+day 3: animated text and scroll down indicator, aswell as changes to the video(found better quality one but i need to cut it up).

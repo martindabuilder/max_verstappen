@@ -1,6 +1,7 @@
 import backgroundVideo from "../assets/videos/donuts.mp4";
 import "../styles/Donuts.css";
 
+import ScrollHint from "./ScrollHint";
 import IntroText from "./IntroText";
 
 function Donuts() {
@@ -15,6 +16,8 @@ function Donuts() {
       </video>
       
         <IntroText />
+        <ScrollHint />
+    
     </section>
   );
 }
