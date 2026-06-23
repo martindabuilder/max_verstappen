@@ -11,6 +11,7 @@ documentations and other online references
 [motion](https://motion.dev/docs/react)
 [GSAP](https://gsap.com/)
 [React Bits](https://reactbits.dev/)
+[Cursor-reactive gradients - dev.to](https://dev.to/sammiihk/cursor-reactive-gradients-making-css-respond-to-mouse-position-5ga3)
 
 Text animations:
 [Scroll Reveal](https://reactbits.dev/text-animations/scroll-reveal)
@@ -18,7 +19,7 @@ Text animations:
 [Variable Proximity](https://reactbits.dev/text-animations/variable-proximity)
 [prismic css text animations](https://prismic.io/blog/css-text-animations)
 
-youtube links:
+youtube videos:
 [developedbyed - Page Transitions](https://www.youtube.com/watch?v=S4HYwsBRpRs)
 
 fonts:

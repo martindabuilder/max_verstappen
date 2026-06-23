@@ -24,27 +24,29 @@ function Intro() {
                     initial={{ opacity: 1 }}
                     exit = {{ opacity: 0}}
                     transition = {{ duration: 1.3 }}>
-                        
-                    <motion.img
-                    src = {logo}
-                    alt = "Intro-Logo"
-                    className = "intro-logo"
 
-                    initial = {{ opacity: 0, scale: 0 }}
-                    animate = {{ opacity: 1, scale: 1 }}
+                    <motion.div
+                        className = "logo-wrapper"
+                        initial = {{ opacity: 0, scale: 0 }}
+                        animate = {{ opacity: 1, scale: 1 }}
+                        transition = {{
+                            duration: 0.2,
+                            scale: {
+                                type: "spring",
+                                visualDuration: 0.2,
+                                bounce: 0.3
+                            }
+                        }}>
 
-                    transition = {{
-                        duration: 0.3,
-                        scale: {
-                            type: "spring",
-                            bounce: 0.3,
-                            visualDuration: 0.3
-                        }
-                    }}
-                    />
+                        <img
+                            src = {logo} 
+                            alt = "Intro-Logo" 
+                            className = "intro-logo"
+                        />
+
+                    </motion.div>
                 </motion.div>
             )}
-            
         </AnimatePresence>
     );
 }

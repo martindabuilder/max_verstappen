@@ -28,7 +28,20 @@ function ScrollHint() {
                     animate = {{ opacity: 1, y: 0 }}
                     exit = {{ opacity: 0, y: 20 }}
                     transition = {{ duration: 0.4 }}>
-                        <p>Scroll to continue</p>
+                    <p>Scroll to continue</p>
+
+                    {/* scroll arrow code snippet */}
+                    <motion.div
+                        className = "arrow"
+                        transition = {{
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                            duration: 1.2,
+                        }}>
+
+
+                            
+                    </motion.div>
                 </motion.div>
             )}
         </AnimatePresence>

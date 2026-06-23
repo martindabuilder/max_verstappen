@@ -1,6 +1,9 @@
-.scroll-hint{
-    position: bottom;
-    
+.scroll-hint {    
     color:rgb(255, 255, 255);
     font-family: 'Space Grotesk', sans-serif;
+}
+
+.arrow {
+    color:rgb(255, 255, 255);
+    justify-content: center;
 }
