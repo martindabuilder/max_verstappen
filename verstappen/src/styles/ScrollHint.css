@@ -1,9 +1,24 @@
-.scroll-hint {    
-    color:rgb(255, 255, 255);
+.scroll-hint {
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: 40px;
+
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+
+    color:rgb(216, 224, 145);
     font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
 }
 
 .arrow {
-    color:rgb(255, 255, 255);
-    justify-content: center;
+    width: 12px;
+    height: 12px;
+
+    border-left: 2px solid rgb(216, 224, 145);
+    border-bottom: 2px solid rgb(216, 224, 145);
+
+    margin-top: 2px;
+    transform: rotate(-45deg);
 }

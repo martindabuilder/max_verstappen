@@ -27,7 +27,11 @@ fonts:
 [Birthstrone](https://fonts.google.com/specimen/Birthstone?categoryFilters=Feeling:%2FExpressive%2FFancy&preview.script=Latn)
 
 
-rough timeline of the work ive done:
-day 1: mostly setup on the project itself, starting up the react server etc.
-day 2: creating a few of the components, working mostly on the intro section of the site including the video loop alongside text animation etc.
-day 3: animated text and scroll down indicator, aswell as changes to the video(found better quality one but i need to cut it up).
+rough timeline of the work progress and process:
+day 1: Mostly setup on the project itself, starting up the react server etc.
+
+day 2: Creating a few of the components, working mostly on the intro section of the site including the video loop alongside text animation etc.
+
+day 3: Animated text and scroll down indicator, aswell as changes to the video(found better quality one but i need to cut it up).
+
+day 4: finishing up the intro portion of the site. Scroll hint actually works now, aswell as better qialoty and improved sequence of videos. Slight glow and shine animation on max's logo. Apllied a gradient over the videos for better look visually. Slowly started building the secondary section of the site where the user will scroll to see some of Max's achievements.
