@@ -1,7 +1,7 @@
 .scroll-hint {
     position: absolute;
     transform: translateX(-50%);
-    bottom: 40px;
+    bottom: 50px;
 
     align-items: center;
     flex-direction: column;
@@ -10,15 +10,17 @@
     color:rgb(216, 224, 145);
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.1rem;
+    z-index: 1;
 }
 
 .arrow {
     width: 12px;
     height: 12px;
 
-    border-left: 2px solid rgb(216, 224, 145);
+    border-right: 2px solid rgb(216, 224, 145);
     border-bottom: 2px solid rgb(216, 224, 145);
 
-    margin-top: 2px;
-    transform: rotate(-45deg);
+    margin-top: 1px;
+    z-index: 1;
+
 }

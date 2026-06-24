@@ -8,6 +8,7 @@
     z-index: 10;
     width: 90%;
     max-width: 1100px;
+    z-index: 1;
 }
 
 .intro-subtitle {

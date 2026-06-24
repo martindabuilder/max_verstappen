@@ -39,6 +39,7 @@ function ScrollHint() {
                     {/* scroll arrow code snippet */}
                     <motion.div
                         className = "arrow"
+                        style = {{ rotate: 45 }}
                         animate = {{ y: [0, 7, 0] }}
                         transition = {{
                             repeat: Infinity,
