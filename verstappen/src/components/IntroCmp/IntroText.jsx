@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import SVGStrokeText from "./SVGStrokeText";
-import "../styles/IntroText.css";
+import "../../styles/IntroStyles/IntroText.css";
 
 function Intro_text() {
   return (

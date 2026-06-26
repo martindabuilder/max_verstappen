@@ -4,9 +4,9 @@
 import { useState, useRef } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
-import donuts from "../assets/videos/donuts.mp4";
+import donuts from "../../assets/videos/donuts.mp4";
 
-import "../styles/Donuts.css";
+import "../../styles/IntroStyles/Donuts.css";
 
 import IntroText from "./IntroText";
 import ScrollHint from "./ScrollHint";

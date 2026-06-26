@@ -3,8 +3,8 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect } from "react";
 
-import logo from "../assets/images/intro_images/logo.png";
-import "../styles/Intro.css";
+import logo from "../../assets/images/intro_images/logo.png";
+import "../../styles/IntroStyles/Intro.css";
 
 function Intro() {
 

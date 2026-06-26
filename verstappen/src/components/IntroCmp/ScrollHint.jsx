@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "motion/react";
 import { useState, useEffect} from "react";
-import "../styles/ScrollHint.css";
+import "../../styles/IntroStyles/ScrollHint.css";
 
 function ScrollHint() {
     const [showHint, setShowHint] = useState(false);
