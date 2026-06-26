@@ -1,3 +1,5 @@
+/*contains the logic behind the black-out logo popping intro*/
+
 import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect } from "react";
 

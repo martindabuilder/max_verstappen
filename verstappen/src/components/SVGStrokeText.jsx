@@ -1,6 +1,20 @@
 import { motion } from "motion/react";
+import { useRef, useState } from "react";
 
 function SVGStrokeText({ text, fontSize = 30, delay = 1.5 }) {
+  const svgRef = useRef(null);
+
+  const [mouse, setMouse] = useState({
+    x: -1000,
+    y: -1000,
+    active: false,
+  })
+
+  const handleHover = (e) => {
+    const svg = svgRef.current;
+    if (!svg) return;
+  }
+  
   return (
     <svg
       viewBox = "0 0 1400 160"

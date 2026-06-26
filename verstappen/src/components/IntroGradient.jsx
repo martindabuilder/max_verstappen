@@ -1,3 +1,4 @@
+/*gradient overlay that follows the cursor around*/
 import { useEffect } from "react";
 import "../styles/IntroGradient.css";
 

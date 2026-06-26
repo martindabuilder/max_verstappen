@@ -1,3 +1,5 @@
+/*component containing the 2 flavor texts in the intro*/
+
 import { motion } from "motion/react";
 import SVGStrokeText from "./SVGStrokeText";
 import "../styles/IntroText.css";

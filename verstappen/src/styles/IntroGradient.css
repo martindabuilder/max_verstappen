@@ -20,13 +20,13 @@
 
         radial-gradient(
             circle at calc(50% + var(--x)) calc(30% + var(--y)),
-            rgba(21, 60, 253, 0.25),
+            rgba(21, 60, 253, 0.397),
             transparent 60%
         ),
 
         radial-gradient(
             circle at calc(70% - var(--x)) calc(20% - var(--y)),
-            rgba(248, 10, 10, 0.35),
+            rgba(248, 73, 10, 0.411),
             transparent 65%
         ),
 

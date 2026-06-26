@@ -1,3 +1,6 @@
+/*contains the main logic behind the first section*/
+/*ie: the video loop, gradient and noise overlay, title text and transitions*/
+
 import { useState, useRef } from "react";
 import { AnimatePresence, motion } from "motion/react";
 

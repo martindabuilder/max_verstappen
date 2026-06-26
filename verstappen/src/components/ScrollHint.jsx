@@ -1,3 +1,5 @@
+/*scroll to continue hint logic*/
+
 import { AnimatePresence, motion } from "motion/react";
 import { useState, useEffect} from "react";
 import "../styles/ScrollHint.css";
