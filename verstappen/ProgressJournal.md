@@ -32,7 +32,7 @@ fonts:
 [Birthstrone](https://fonts.google.com/specimen/Birthstone?categoryFilters=Feeling:%2FExpressive%2FFancy&preview.script=Latn)
 
 
-rough timeline of the work progress and process:
+Rough timeline of the work progress day by day:
 
 day 1: Mostly setup on the project itself, starting up the react server etc.
 
@@ -40,8 +40,9 @@ day 2: Creating a few of the components, working mostly on the intro section of 
 
 day 3: Animated text and scroll down indicator, aswell as changes to the video(found better quality one but i need to cut it up).
 
-day 4: finishing up the intro portion of the site. Scroll hint actually works now, aswell as better qialoty and improved sequence of videos. Slight glow and shine animation on Max's logo. Apllied a gradient over the videos for better look visually. Slowly started building the secondary section of the site where the user will scroll to see some of Max's achievements.
+day 4: finishing up the intro portion of the site. Scroll hint actually works now, aswell as better quality and improved sequence of videos. Slight glow and shine animation on Max's logo. Applied a gradient over the videos for better look visually. Slowly started building the secondary section of the site where the user will scroll to and start seeing some of Max's achievements.
 
-day 5: Mostly break to do some art, very minor touch ups here and there but not any commits.
+day 5: Mostly break to do some art, very minor touch ups here and there but no major changes and no commits.
 
-day 6: Fixing the video loop and fade out, aswell as adding a small overlay effect to the video. Changes to the intro text aswell (cant decide on a font yet). Started work on the secondary section which you scroll down to.
+day 6: Big change is restructuring a bit, created seperate folders for the components/styles for each seperate section. Created the folders and main files for the next 2 sections. Started gathering ideas for said 2 sections.
+ Fixed the video loop, added a better designed gradient overlay that follows the cursor, aswell as a grainy noise overlay. Added a transition where once you start scrolling the video background blurs and slows down slighty, if you scroll back up the video unblurs and goes back to the default speed. Fixed the disappearing scroll hint, and the hint now properly returns after a short delay once you scroll up. Adjustments to the main text and font change (not 100% sure on the font yet but will keep it as is). Will probably go back and add more effects to the text for a nicer feel, but might leave for last touches.

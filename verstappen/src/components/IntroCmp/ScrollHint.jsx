@@ -1,29 +1,42 @@
 /*scroll to continue hint logic*/
 
 import { AnimatePresence, motion } from "motion/react";
-import { useState, useEffect} from "react";
+import { useState, useEffect, useRef} from "react";
 import "../../styles/IntroStyles/ScrollHint.css";
 
 function ScrollHint() {
     const [showHint, setShowHint] = useState(false);
+    const lastScrollY = useRef(0);
 
+    /*delay after which the scroll hint will show up*/
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowHint(true);
         }, 5000)
 
+        return() => {clearTimeout(timer);};
+    }, []);
+
+    /*handles the logic for the scroll hint when scrolling back up*/
+    useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 10) {
-                setTimeout(() => setShowHint(false), 200);
+            const currentScrollY = window.scrollY;
+            const last = lastScrollY.current;
+
+            if (currentScrollY > last) {
+                setShowHint(false);
             }
-        }
 
-        window.addEventListener("scroll", handleScroll);
+            if (currentScrollY < last) {
+                setShowHint(true);
+            }
 
-        return() => {
-            clearTimeout(timer);
-            window.removeEventListener("scroll", handleScroll);
+            lastScrollY.current = currentScrollY;
         };
+
+        window.addEventListener("scroll", handleScroll, {passive: true});
+
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return(

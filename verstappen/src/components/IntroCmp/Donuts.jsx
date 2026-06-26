@@ -1,7 +1,7 @@
 /*contains the main logic behind the first section*/
 /*ie: the video loop, gradient and noise overlay, title text and transitions*/
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
 import donuts from "../../assets/videos/donuts.mp4";
@@ -18,6 +18,7 @@ function Donuts() {
   const [isFading, setIsFading] = useState(false);
   const hasFaded = useRef(false);
 
+  /*handles the looping of the video*/
   const handleTimeUpdate = () => {
     const video = videoRef.current;
 
@@ -44,6 +45,23 @@ function Donuts() {
       hasFaded.current = false;
     }, 1800);
   };
+
+  /*blur on scroll effect*/
+  useEffect(() => {
+    const onScroll = () => {
+      const video = videoRef.current;
+      const progress = Math.min(window.scrollY / window.innerHeight, 1);
+
+      if (video) {
+        video.style.filter    = `blur(${progress * 12}px)`;
+        video.style.transform = `scale(${1.3 + progress * 0.08})`;
+        video.playbackRate    = Math.max(1 - progress * 0.9, 0.7);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+  return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <section className = "donuts">

@@ -7,7 +7,6 @@ import logo from "../../assets/images/intro_images/logo.png";
 import "../../styles/IntroStyles/Intro.css";
 
 function Intro() {
-
     const [showLogo, setShowLogo] = useState(true);
 
     useEffect(() => {

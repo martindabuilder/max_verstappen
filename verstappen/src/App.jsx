@@ -14,7 +14,7 @@ function App() {
       {/* intro portion of the site */}
       <Intro />
       <Donuts />
-    
+          
       {/* 1st scroll portion of the site - Drivers championships*/}
       <WDC />
       {/* 2nd scroll portion of the site - wins*/}
