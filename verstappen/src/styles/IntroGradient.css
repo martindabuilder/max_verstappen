@@ -1,3 +1,11 @@
 .overlay-container {
+    position: absolute;
+    pointer-events: none;
     z-index: 0;
+}
+
+.intro-gradient {
+    position: absolute;
+
+    
 }

@@ -1,9 +1,9 @@
 import { motion } from "motion/react";
 
-function SVGStrokeText({ text, fontSize = 90, delay = 0.5 }) {
+function SVGStrokeText({ text, fontSize = 30, delay = 0.5 }) {
   return (
     <svg
-      viewBox = "0 0 1100 160"
+      viewBox = "0 0 1400 160"
       xmlns = "http://www.w3.org/2000/svg"
       style = {{
         width: "100%",
@@ -16,10 +16,10 @@ function SVGStrokeText({ text, fontSize = 90, delay = 0.5 }) {
         y="100"
         textAnchor = "middle"
         dominantBaseline="middle"
-        fontFamily = "Birthstone, cursive"
+        fontFamily = 'Space Grotesk, sans-serif'
         fontSize = {fontSize}
         fill = "none"
-        stroke = "rgb(255, 255, 255)"
+        stroke = "rgb(239, 235, 199)"
         strokeWidth = "1"
         initial = {{
           strokeDasharray: 2000,
@@ -41,9 +41,9 @@ function SVGStrokeText({ text, fontSize = 90, delay = 0.5 }) {
         y = "99"
         textAnchor = "middle"
         dominantBaseline="middle"
-        fontFamily = "Birthstone, cursive"
+        fontFamily = 'Space Grotesk, sans-serif'
         fontSize = {fontSize}
-        fill = "rgb(255, 255, 255)"
+        fill = "rgb(239, 235, 199)"
         initial = {{ opacity: 0 }}
         animate = {{ opacity: 1 }}
         transition = {{

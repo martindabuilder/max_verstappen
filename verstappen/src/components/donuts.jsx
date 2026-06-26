@@ -1,26 +1,44 @@
 import { useState, useRef } from "react";
+import { AnimatePresence, motion } from "motion/react";
+
 import donuts from "../assets/videos/donuts.mp4";
 
 import "../styles/Donuts.css";
 
 import IntroText from "./IntroText";
 import ScrollHint from "./ScrollHint";
-import { AnimatePresence } from "motion/react";
+import IntroGradient from "./IntroGradient";
 
 function Donuts() {
   const videoRef = useRef(null);
   const [isFading, setIsFading] = useState(false);
+  const hasFaded = useRef(false);
+
+  const handleTimeUpdate = () => {
+    const video = videoRef.current;
+
+    if (!video || hasFaded.current) return;
+
+    if (video.duration - video.currentTime <= 0.7){
+      hasFaded.current = true;
+      setIsFading(true);
+    }
+  };
 
   const handleVideoEnd = () => {
-    setIsFading(true);
-    setTimeout (() => {
-      if (videoRef.current) {
-        videoRef.current.currentTime = 0;
-        videoRef.current.play();
-      }
+    const video = videoRef.current;
+
+    if (!video) return;
+
+    setTimeout(() => {
+      video.currentTime = 0;
+
+      video.play().catch(console.error);
 
       setIsFading(false);
-    }, 800);
+
+      hasFaded.current = false;
+    }, 1800);
   };
 
   return (
@@ -29,7 +47,8 @@ function Donuts() {
         ref = {videoRef}
         autoPlay
         muted
-        playsInLine
+        playsInline
+        onTimeUpdate={handleTimeUpdate}
         onEnded = {handleVideoEnd}
         className = "bg-video">
           <source src = {donuts} type = "video/mp4" />
@@ -37,15 +56,19 @@ function Donuts() {
 
       <AnimatePresence>
         {isFading && (
-          <MotionConfig.div 
+          <motion.div 
             className = "fade-overlay"
             initial = {{ opacity: 0}}
             animate = {{ opacity: 1}}
             exit = {{ opacity: 0}}
-            transition = {{ duration: 0.4 }}
+            transition = {{ 
+              duration: 0.6,
+              ease: "easeInOut"
+             }}
           />
         )}
       </AnimatePresence>
+      <IntroGradient />
 
       <ScrollHint />
       <IntroText />

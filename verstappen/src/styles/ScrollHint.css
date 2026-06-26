@@ -7,7 +7,7 @@
     flex-direction: column;
     display: flex;
 
-    color:rgb(216, 224, 145);
+    color:rgb(241, 246, 194);
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.1rem;
     z-index: 1;
@@ -17,8 +17,8 @@
     width: 12px;
     height: 12px;
 
-    border-right: 2px solid rgb(216, 224, 145);
-    border-bottom: 2px solid rgb(216, 224, 145);
+    border-right: 2px solid rgb(241, 246, 194);
+    border-bottom: 2px solid rgb(241, 246, 194);
 
     margin-top: 1px;
     z-index: 1;
