@@ -20,6 +20,9 @@ Text animations:
 [Variable Proximity](https://reactbits.dev/text-animations/variable-proximity)
 [prismic css text animations](https://prismic.io/blog/css-text-animations)
 
+gradients:
+[3d animated gradient with JS and WebGL](https://javascript.plainenglish.io/making-an-animated-html5-canvas-gradient-effect-62e7f84d7c2f)
+
 youtube videos i used for either reference/inspiration/code:
 [Page Transitions- developedbyed](https://www.youtube.com/watch?v=S4HYwsBRpRs)
 [CSS Morphing Gradients Animated Background - WeCoded](https://youtu.be/Ml-B-W91gtw?si=7O2-4uc3bArIu8Rd)

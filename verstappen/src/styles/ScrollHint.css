@@ -10,7 +10,7 @@
     color:rgb(241, 246, 194);
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.1rem;
-    z-index: 1;
+    z-index: 2;
 }
 
 .arrow {
@@ -21,6 +21,6 @@
     border-bottom: 2px solid rgb(241, 246, 194);
 
     margin-top: 1px;
-    z-index: 1;
+    z-index: 2;
 
 }
