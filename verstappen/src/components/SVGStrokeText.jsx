@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-function SVGStrokeText({ text, fontSize = 30, delay = 0.5 }) {
+function SVGStrokeText({ text, fontSize = 30, delay = 1.5 }) {
   return (
     <svg
       viewBox = "0 0 1400 160"
@@ -20,16 +20,19 @@ function SVGStrokeText({ text, fontSize = 30, delay = 0.5 }) {
         fontSize = {fontSize}
         fill = "none"
         stroke = "rgb(239, 235, 199)"
-        strokeWidth = "1"
+        strokeWidth = "2.1"
+
         initial = {{
-          strokeDasharray: 2000,
-          strokeDashoffset: 2000,
+          strokeDasharray: 3000,
+          strokeDashoffset: 3000,
         }}
+
         animate = {{
           strokeDashoffset: 0,
         }}
+
         transition={{
-          duration: 2.5,
+          duration: 3,
           ease: "easeInOut",
           delay,
         }}>
@@ -44,11 +47,13 @@ function SVGStrokeText({ text, fontSize = 30, delay = 0.5 }) {
         fontFamily = 'Space Grotesk, sans-serif'
         fontSize = {fontSize}
         fill = "rgb(239, 235, 199)"
+
         initial = {{ opacity: 0 }}
         animate = {{ opacity: 1 }}
+
         transition = {{
           duration: 0.5,
-          delay: delay + 2.3,
+          delay: 4.5,
         }}>
             
         {text}

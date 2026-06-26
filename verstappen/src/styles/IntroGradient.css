@@ -3,7 +3,7 @@
     inset: 0;
 
     pointer-events: none;
-    z-index: 0;
+    z-index: 3;
 
     mix-blend-mode: overlay;
     background-blend-mode: overlay;
@@ -33,23 +33,4 @@
         linear-gradient(
             60deg, rgba(255, 0, 0, 0.25), rgba(17, 0, 255, 0.35)
         );
-}
-
-.intro-gradient::after {
-    content: "";
-    position: absolute;
-    opacity: 0.06;
-
-    inset: 0;
-
-    mix-blend-mode: hue;
-
-    background-image: var(--noise-url--);
-    background-repeat: repeat;
-
-    animation: noise 0.3s infinite;
-}
-
-@keyframes noise {
-
 }

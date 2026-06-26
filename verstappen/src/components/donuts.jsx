@@ -8,6 +8,7 @@ import "../styles/Donuts.css";
 import IntroText from "./IntroText";
 import ScrollHint from "./ScrollHint";
 import IntroGradient from "./IntroGradient";
+import NoiseOverlay from "./NoiseOverlay";
 
 function Donuts() {
   const videoRef = useRef(null);
@@ -68,8 +69,10 @@ function Donuts() {
           />
         )}
       </AnimatePresence>
-      <IntroGradient />
 
+      <NoiseOverlay />
+      <IntroGradient />
+      
       <ScrollHint />
       <IntroText />
     </section>

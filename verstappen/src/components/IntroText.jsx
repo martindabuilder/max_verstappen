@@ -9,7 +9,7 @@ function Intro_text() {
       <SVGStrokeText
         text="Max Verstappen"
         fontSize = {230}
-        delay = {1.5}/>
+        delay = {3}/>
 
       <motion.p
         className = "intro-subtitle"
@@ -17,7 +17,7 @@ function Intro_text() {
         animate = {{ opacity: 1, y: 0 }}
         transition = {{
           duration: 0.9,
-          delay: 4.2,
+          delay: 4.3,
         }}>
             
         4 Time Formula 1 World Champion

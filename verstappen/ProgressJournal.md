@@ -7,7 +7,8 @@ documentations and other online references:
 [GSAP](https://gsap.com/)
 [React Bits](https://reactbits.dev/)
 [Cursor-reactive gradients - dev.to](https://dev.to/sammiihk/cursor-reactive-gradients-making-css-respond-to-mouse-position-5ga3)
-[Css Background Effects - prismic](https://prismic.io/blog/css-background-effects)
+[CSS Background Effects - prismic](https://prismic.io/blog/css-background-effects)
+[Scroll blur and moving noise with React, Motion, and CSS](https://medium.com/@moraromerojuan8/scroll-blur-and-moving-noise-with-react-motion-and-css-49922adbbdda)
 
 Text animations:
 [Scroll Reveal](https://reactbits.dev/text-animations/scroll-reveal)
@@ -15,12 +16,16 @@ Text animations:
 [Variable Proximity](https://reactbits.dev/text-animations/variable-proximity)
 [prismic css text animations](https://prismic.io/blog/css-text-animations)
 
-gradients:
+gradients and noise:
 [3d animated gradient with JS and WebGL](https://javascript.plainenglish.io/making-an-animated-html5-canvas-gradient-effect-62e7f84d7c2f)
+[Noise - reacbits](https://reactbits.dev/animations/noise)
+[Animating Repeating Noise Mask with @property](https://codepen.io/argyleink/pen/vYPZgXB)
 
 youtube videos i used for either reference/inspiration/code:
 [Page Transitions- developedbyed](https://www.youtube.com/watch?v=S4HYwsBRpRs)
 [CSS Morphing Gradients Animated Background - WeCoded](https://youtu.be/Ml-B-W91gtw?si=7O2-4uc3bArIu8Rd)
+[Animated noise with CSS only shouldnt be possible!](https://www.youtube.com/watch?v=SxFNqnSOgh0)
+[React Animation Course with Motion - Become an Animations Pro in 1 Hour](https://www.youtube.com/watch?v=9-fO_2xTpgY)
 
 fonts:
 [Raleway](https://fonts.google.com/specimen/Raleway?utm_source=chatgpt.com&preview.text=Max%20Verstappen&specimen.preview.text=Max+Verstappen)
