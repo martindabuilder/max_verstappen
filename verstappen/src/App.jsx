@@ -4,6 +4,7 @@ import Donuts from './components/IntroCmp/Donuts.jsx'
 import Intro from './components/IntroCmp/Intro.jsx'
 import WDC from './components/WDC/WDCSection.jsx'
 import Wins from './components/Wins/WinsSection.jsx'
+import Podiums from './components/PodiumsSection.jsx'
 
 import './styles/App.css'
 import './styles/IntroStyles/Donuts.css'
@@ -21,6 +22,9 @@ function App() {
 
       {/* 2nd scroll portion of the site - wins*/}
       <Wins />
+
+      {/* 3rd scroll portion of the site - podiums*/}
+      <Podiums />
 
     </>
   );
