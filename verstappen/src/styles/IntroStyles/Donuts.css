@@ -28,3 +28,12 @@
     pointer-events: none;
     z-index: 0;
 }
+
+.scroll-fade-overlay {
+    position: absolute;
+    inset: 0;
+    background: black;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.05s linear;
+}

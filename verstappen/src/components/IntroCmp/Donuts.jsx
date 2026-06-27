@@ -17,6 +17,7 @@ function Donuts() {
   const videoRef = useRef(null);
   const [isFading, setIsFading] = useState(false);
   const hasFaded = useRef(false);
+  const [scrollOpacity, setScrollOpacity] = useState(0);
 
   /*handles the looping of the video*/
   const handleTimeUpdate = () => {
@@ -57,6 +58,8 @@ function Donuts() {
         video.style.transform = `scale(${1.3 + progress * 0.08})`;
         video.playbackRate    = Math.max(1 - progress * 0.9, 0.7);
       }
+
+      setScrollOpacity(progress);
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -90,6 +93,11 @@ function Donuts() {
           />
         )}
       </AnimatePresence>
+
+      <div
+        className="scroll-fade-overlay"
+        style={{ opacity: scrollOpacity }}
+      />
 
       <NoiseOverlay />
       <IntroGradient />
