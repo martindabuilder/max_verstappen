@@ -2,9 +2,11 @@
 import { useEffect, useState, useRef } from "react";
 import {AnimatePresence, motion } from "motion/react";
 
-import championships from "./Championships.jsx";
+import championships from "../../data/Championships.jsx";
 
-import "../../styles/WDC/WDCSection.css";
+import RollingCounter from "../../shared/RollingCounter.jsx";
+
+import "../../styles/WDCStyles/WDCSection.css";
 
 
 function WDCSection() {

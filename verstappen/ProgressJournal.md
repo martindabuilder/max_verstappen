@@ -51,3 +51,5 @@ day 6: Big change is restructuring a bit, created seperate folders for the compo
  day 7: Intro section is mostly finished as of now, still need to find a way to upscale a bit 2 portions of the video background but that will be done a bit later, will be starting the main work on the secondary page of the site.
  Fixed up a bit the transition between the intro and the wdc section, now it flows a lot nicer between the two sections with an added black gradient (apart from the video blur and slow on the first section).
  Started structuring and working on the animated counter effect that will show 0 -> 4 wdc's, aswell as photos corresponding to the year which max has won.
+ 
+ day 8: Mostly break to go out draw and watch f1 so very little coding work done, some restructuring and slight tweaks and idea gathering/designing mostly, trying to figure out the best way to approach the photo transitions and text during the later sections showing the stats.

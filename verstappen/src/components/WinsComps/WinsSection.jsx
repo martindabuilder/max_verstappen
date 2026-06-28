@@ -1,6 +1,8 @@
 /*third section, containing max's wins*/
 
-import "../../styles/Wins/WinsSection.css";
+import RollingCounter from "../../shared/RollingCounter.jsx";
+
+import "../../styles/WinsStyles/WinsSection.css";
 
 function WinsSection() {
     return (

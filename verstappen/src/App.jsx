@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 
-import Donuts from './components/IntroCmp/Donuts.jsx'
-import Intro from './components/IntroCmp/Intro.jsx'
-import WDC from './components/WDC/WDCSection.jsx'
-import Wins from './components/Wins/WinsSection.jsx'
-import Podiums from './components/PodiumsSection.jsx'
+import Donuts from './components/IntroComps/Donuts.jsx'
+import Intro from './components/IntroComps/Intro.jsx'
+import WDC from './components/WDCComps/WDCSection.jsx'
+import Wins from './components/WinsComps/WinsSection.jsx'
+import Podiums from './components/PodiumsComps/PodiumsSection.jsx'
 
 import './styles/App.css'
 import './styles/IntroStyles/Donuts.css'

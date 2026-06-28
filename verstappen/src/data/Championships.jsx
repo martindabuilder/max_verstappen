@@ -1,7 +1,7 @@
-import wdc2021 from "../../assets/images/WDC_images/2021.png";
-import wdc2022 from "../../assets/images/WDC_images/2022.png";
-import wdc2023 from "../../assets/images/WDC_images/2023.png";
-import wdc2024 from "../../assets/images/WDC_images/2024.png";
+import wdc2021 from "../assets/images/WDC_images/2021.png";
+import wdc2022 from "../assets/images/WDC_images/2022.png";
+import wdc2023 from "../assets/images/WDC_images/2023.png";
+import wdc2024 from "../assets/images/WDC_images/2024.png";
 
 const Championships = [
     {
