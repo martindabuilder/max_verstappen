@@ -30,7 +30,7 @@ function WDCSection() {
 
         <section className="wdc-section">
             
-            <RollingCounter value={count} duration = {4} label = "Wins"/>
+            <RollingCounter value={count} duration = {4} label = "Championships"/>
 
         </section>
 

@@ -5,6 +5,7 @@ import Intro from './components/IntroComps/Intro.jsx'
 import WDC from './components/WDCComps/WDCSection.jsx'
 import Wins from './components/WinsComps/WinsSection.jsx'
 import Podiums from './components/PodiumsComps/PodiumsSection.jsx'
+import Ending from './components/EndingComps/EndingSection.jsx'
 
 import HorizontalGallery from './shared/HorizontalGallery.jsx'
 
@@ -34,6 +35,9 @@ function App() {
       <Podiums />
       <HorizontalGallery />
 
+
+      {/* Ending portion of the site*/}
+      <Ending />
     </>
   );
 }
