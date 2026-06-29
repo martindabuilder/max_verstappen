@@ -53,3 +53,5 @@ day 6: Big change is restructuring a bit, created seperate folders for the compo
  Started structuring and working on the animated counter effect that will show 0 -> 4 wdc's, aswell as photos corresponding to the year which max has won.
  
  day 8: Mostly break to go out draw and watch f1 so very little coding work done, some restructuring and slight tweaks and idea gathering/designing mostly, trying to figure out the best way to approach the photo transitions and text during the later sections showing the stats.
+
+day 9: Small change around the files in the intro portion. Work on the shared counter effect for all the wdc/wins/podiums.

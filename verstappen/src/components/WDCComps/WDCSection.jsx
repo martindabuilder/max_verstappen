@@ -10,11 +10,38 @@ import "../../styles/WDCStyles/WDCSection.css";
 
 
 function WDCSection() {
+
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+
+        const interval = setInterval(() => {
+
+            setCount(prev => {
+
+                if (prev >= 4) {
+                    clearInterval(interval);
+                    return prev;
+                }
+
+                return prev + 1;
+
+            });
+        }, 1050);
+        return () => clearInterval(interval);
+
+    }, []);
+
     return (
-        <section className = "wdc-section">
+
+        <section className="wdc-section">
+            
+            <RollingCounter value={count} />
 
         </section>
-    )
+
+    );
+
 }
 
 export default WDCSection;

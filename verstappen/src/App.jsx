@@ -6,6 +6,8 @@ import WDC from './components/WDCComps/WDCSection.jsx'
 import Wins from './components/WinsComps/WinsSection.jsx'
 import Podiums from './components/PodiumsComps/PodiumsSection.jsx'
 
+import HorizontalGallery from './shared/HorizontalGallery.jsx'
+
 import './styles/App.css'
 import './styles/IntroStyles/Donuts.css'
 
@@ -17,6 +19,7 @@ function App() {
       <Intro />
       <Donuts />
           
+      <HorizontalGallery />
       {/* 1st scroll portion of the site - Drivers championships*/}
       <WDC />
 

@@ -9,7 +9,7 @@ import donuts from "../../assets/videos/donuts.mp4";
 import "../../styles/IntroStyles/Donuts.css";
 
 import IntroText from "./IntroText";
-import ScrollHint from "./ScrollHint";
+import ScrollHint from "../../shared/ScrollHint";
 import IntroGradient from "./IntroGradient";
 import NoiseOverlay from "./NoiseOverlay";
 
@@ -63,7 +63,7 @@ function Donuts() {
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
-  return () => window.removeEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (

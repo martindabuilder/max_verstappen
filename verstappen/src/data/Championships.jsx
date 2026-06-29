@@ -6,7 +6,7 @@ import wdc2024 from "../assets/images/WDC_images/2024.png";
 const Championships = [
     {
         count: 0,
-        year: "",
+        year: "2020",
         image: null,
     },
 
