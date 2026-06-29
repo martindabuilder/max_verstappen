@@ -1,7 +1,7 @@
 /*noise overlay used for the video intro portion*/
 
 import { useEffect, useRef } from "react";
-import "../../styles/IntroStyles/NoiseOverlay.css";
+import "../../styles/IntroStyles/Donuts.css";
 
 export default function NoiseOverlay() {
   const canvasRef = useRef(null);
