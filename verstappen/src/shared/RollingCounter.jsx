@@ -1,37 +1,50 @@
-
-import { AnimatePresence, motion } from "motion/react";
+import { useEffect, useRef, useCallback, useState } from "react";
 import "./RollingCounter.css";
 
-function RollingCounter({value, duration = 0.55, suffix = "", className = ""}){
-    const counterVariants = {
-        initial: {
-            opacity: 0,
-        },
+function RollingCounter({ value, duration = 0.8, suffix = "", className = "", label = "" }) {
+    const ref = useRef(null);
+    const [displayValue, setDisplayValue] = useState(0);
 
-        animate: {
-            opacity: 1,
-        },
-    };
+    const formatValue = useCallback((latest) => {
+        return `${Math.round(latest)}${suffix}`;
+    }, [suffix]);
+
+    useEffect(() => {
+        const startTime = performance.now();
+        const startValue = 0;
+        const endValue = value;
+
+        const updateValue = (currentTime) => {
+            const elapsed = (currentTime - startTime) / 1000;
+            const progress = Math.min(elapsed / duration, 1);
+            const currentValue = startValue + (endValue - startValue) * progress;
+
+            setDisplayValue(currentValue);
+
+            if (progress < 1) {
+                requestAnimationFrame(updateValue);
+            }
+        };
+
+        const frameId = requestAnimationFrame(updateValue);
+
+        return () => cancelAnimationFrame(frameId);
+    }, [value, duration]);
+
+    useEffect(() => {
+        if (ref.current) {
+            ref.current.textContent = formatValue(displayValue);
+        }
+    }, [displayValue, formatValue]);
 
     return (
         <div className={`rolling-counter-wrapper ${className}`}>
-            <AnimatePresence>
-                <motion.span
-                key = {value}
-                className = "counter-number"
-                variants = {counterVariants}
-                initial = "initial"
-                animate = "animate"
-                transition = {{
-                    duration,
-                    ease: "easeInOut",
-                }}>
-                    {value}
-                    {suffix}
-                </motion.span>
-            </AnimatePresence>
+            <div className="counter-content">
+                <span ref={ref} className="counter-number" />
+                {label ? <span className="counter-label">{label}</span> : null}
+            </div>
         </div>
-    )
+    );
 }
 
 export default RollingCounter;

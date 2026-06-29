@@ -1,7 +1,10 @@
 .wins-section{
-    min-height: 130vh;
+     min-height: 130vh;
     width: 100%;
-    background: linear-gradient(black, rgb(0, 26, 255));
+
+    background: linear-gradient(black, rgb(0, 98, 255));
+    
+    display: flex;
     justify-content: center;
     align-items: center;
 }

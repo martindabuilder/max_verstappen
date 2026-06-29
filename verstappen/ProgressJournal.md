@@ -15,6 +15,7 @@ Text animations:
 [Scroll Velocity](https://reactbits.dev/text-animations/scroll-velocity)
 [Variable Proximity](https://reactbits.dev/text-animations/variable-proximity)
 [prismic css text animations](https://prismic.io/blog/css-text-animations)
+[Count up - reactbits](https://reactbits.dev/text-animations/count-up)
 
 gradients and noise:
 [3d animated gradient with JS and WebGL](https://javascript.plainenglish.io/making-an-animated-html5-canvas-gradient-effect-62e7f84d7c2f)
@@ -54,4 +55,5 @@ day 6: Big change is restructuring a bit, created seperate folders for the compo
  
  day 8: Mostly break to go out draw and watch f1 so very little coding work done, some restructuring and slight tweaks and idea gathering/designing mostly, trying to figure out the best way to approach the photo transitions and text during the later sections showing the stats.
 
-day 9: Small change around the files in the intro portion. Work on the shared counter effect for all the wdc/wins/podiums.
+day 9: Small changes around the files in the intro portion, aswell as adding a small zred Bull logo that will flash behind the title text when the video goes to black. Worked on the shared reusable counter component for all the wdc/wins/podiums. Working on a reusable section, which is going to work as a transition point between all the seperate section, it will consist of a "slideshow" sort of effect where a few photos of max will scroll to the screen right to left, and each different use will have seperate photos to shake it up.
+Gathered a bunch more photos for the transition sections and the podiums and wins, will need to organize those a lot lol.

@@ -10,33 +10,27 @@ import "../../styles/WDCStyles/WDCSection.css";
 
 
 function WDCSection() {
-
+    /*Handles the counter going to 4*/
     const [count, setCount] = useState(0);
-
     useEffect(() => {
-
         const interval = setInterval(() => {
-
             setCount(prev => {
-
                 if (prev >= 4) {
                     clearInterval(interval);
                     return prev;
                 }
-
                 return prev + 1;
-
             });
-        }, 1050);
+        });
         return () => clearInterval(interval);
-
     }, []);
 
+    
     return (
 
         <section className="wdc-section">
             
-            <RollingCounter value={count} />
+            <RollingCounter value={count} duration = {4} label = "Wins"/>
 
         </section>
 

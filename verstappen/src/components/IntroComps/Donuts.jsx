@@ -18,6 +18,7 @@ function Donuts() {
   const [isFading, setIsFading] = useState(false);
   const hasFaded = useRef(false);
   const [scrollOpacity, setScrollOpacity] = useState(0);
+  const [showRBLogo, setRBLogo] = useState(false);
 
   /*handles the looping of the video*/
   const handleTimeUpdate = () => {
@@ -31,6 +32,7 @@ function Donuts() {
     }
   };
 
+  /*handles the video repeating and the black background that follows after it*/
   const handleVideoEnd = () => {
     const video = videoRef.current;
 

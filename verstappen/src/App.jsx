@@ -18,16 +18,21 @@ function App() {
       {/* intro portion of the site */}
       <Intro />
       <Donuts />
-          
+
+      {/* Reusable scroll gallery transition section*/}
       <HorizontalGallery />
+
       {/* 1st scroll portion of the site - Drivers championships*/}
       <WDC />
+      <HorizontalGallery />
 
       {/* 2nd scroll portion of the site - wins*/}
       <Wins />
+      <HorizontalGallery />
 
       {/* 3rd scroll portion of the site - podiums*/}
       <Podiums />
+      <HorizontalGallery />
 
     </>
   );
