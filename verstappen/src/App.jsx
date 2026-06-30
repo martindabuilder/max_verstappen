@@ -14,6 +14,12 @@ import './styles/IntroStyles/Donuts.css'
 
 
 function App() {
+  /*On refresh the page starts from the top again*/
+  useEffect(() => {
+    window.scrollRestoration = 'manual'
+    window.scrollTo(0, 0)
+  }, []);
+
   return (
     <>
       {/* intro portion of the site */}

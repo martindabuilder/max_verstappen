@@ -2,8 +2,10 @@
 import { useEffect } from "react";
 import "../../styles/IntroStyles/Donuts.css";
 
-function IntroGradient() {
+function IntroGradient({ enabled }) {
   useEffect(() => {
+    if (!enabled) return;
+
     if (window.matchMedia("(pointer: coarse)").matches) return;
 
     let currentX = 0;
@@ -34,7 +36,7 @@ function IntroGradient() {
       window.removeEventListener("mousemove", onMouseMove);
       if (rafId) cancelAnimationFrame(rafId);
     };
-  }, []);
+  }, [enabled]);
 
   return <div className="intro-gradient" />;
 }

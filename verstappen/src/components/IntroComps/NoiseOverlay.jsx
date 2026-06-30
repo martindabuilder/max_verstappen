@@ -3,7 +3,9 @@
 import { useEffect, useRef } from "react";
 import "../../styles/IntroStyles/Donuts.css";
 
-export default function NoiseOverlay() {
+function NoiseOverlay({ enabled }) {
+  if(!enabled) return;
+  
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -52,3 +54,5 @@ export default function NoiseOverlay() {
 
   return <canvas className="noise-overlay" ref={canvasRef} />;
 }
+
+export default NoiseOverlay;

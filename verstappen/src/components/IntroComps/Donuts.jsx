@@ -2,7 +2,7 @@
 /*ie: the video loop, gradient and noise overlay, title text and transitions*/
 
 import { useState, useRef, useEffect } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion, useInView } from "motion/react";
 
 import donuts from "../../assets/videos/donuts.mp4";
 
@@ -19,6 +19,8 @@ function Donuts() {
   const hasFaded = useRef(false);
   const [scrollOpacity, setScrollOpacity] = useState(0);
   const [showRBLogo, setRBLogo] = useState(false);
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, {amount: 0.2,});
 
   /*handles the looping of the video*/
   const handleTimeUpdate = () => {
@@ -51,6 +53,8 @@ function Donuts() {
 
   /*blur on scroll effect*/
   useEffect(() => {
+    if (!isInView) return;
+
     const onScroll = () => {
       const video = videoRef.current;
       const progress = Math.min(window.scrollY / window.innerHeight, 1);
@@ -65,11 +69,24 @@ function Donuts() {
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
+
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [isInView]);
+
+  /*pause/plays the video whether the section is/is not in view*/
+  useEffect(()=> {
+    const video = videoRef.current;
+
+    if (isInView) {
+      video.play().catch(() => {});
+    }
+    else {
+      video.pause();
+    }
+  }, [isInView]);
 
   return (
-    <section className = "donuts">
+    <section ref = {sectionRef} className = "donuts">
       <video
         ref = {videoRef}
         autoPlay
@@ -101,8 +118,8 @@ function Donuts() {
         style={{ opacity: scrollOpacity }}
       />
 
-      <NoiseOverlay />
-      <IntroGradient />
+      <NoiseOverlay enabled = {isInView}/>
+      <IntroGradient enabled = {isInView}/>
       
       <ScrollHint />
       <IntroText />
