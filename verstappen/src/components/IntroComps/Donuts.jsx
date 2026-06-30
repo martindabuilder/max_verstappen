@@ -20,7 +20,7 @@ function Donuts() {
   const [scrollOpacity, setScrollOpacity] = useState(0);
   const [showRBLogo, setRBLogo] = useState(false);
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, {amount: 0.2,});
+  const isInView = useInView(sectionRef, {amount: 0.1,});
 
   /*handles the looping of the video*/
   const handleTimeUpdate = () => {
