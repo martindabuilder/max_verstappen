@@ -68,4 +68,6 @@ Still gathering photos for the scroll section, but working on its code and funct
 
 day 11: was away for the whole day so no real progress
 
-day 12:
+day 12: was away for the whole day again so no real progress apart from some brainstorming and figuring out ideas
+
+day 13:
