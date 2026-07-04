@@ -66,8 +66,4 @@ Gathered a bunch more photos for the transition sections, sections for the podiu
 day 10: Made it so that if the page is refreshed it goes back to the top automatically. Alongside that, did some small tweaks to the video and the intro section, and now once you have scrolled past the intro, effects such as the noise layer and the animated gradient "turn off" automatically so they dont slow the site down if the user doesn't see them currently.
 Still gathering photos for the scroll section, but working on its code and functionalities.
 
-day 11: was away for the whole day so no real progress
-
-day 12: was away for the whole day again so no real progress apart from some brainstorming and figuring out ideas
-
-day 13:
+day 11: Some work on the scroll transition section.

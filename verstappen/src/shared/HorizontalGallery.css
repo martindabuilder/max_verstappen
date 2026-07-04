@@ -1,5 +1,11 @@
 .horizontal-gallery{
     height: 200vh;
     background-color: black;
-    color: white;
+    color: rgb(255, 255, 255);
+}
+
+.horizontal-gallery-items img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
