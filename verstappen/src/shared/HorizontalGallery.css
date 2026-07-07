@@ -1,7 +1,8 @@
 .horizontal-gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     height: 200vh;
     background-color: black;
-    color: rgb(255, 255, 255);
 }
 
 .horizontal-gallery-items img {
