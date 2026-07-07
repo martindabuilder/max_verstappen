@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 
 import Donuts from './components/IntroComps/Donuts.jsx'
 import Intro from './components/IntroComps/Intro.jsx'
@@ -26,17 +26,23 @@ function App() {
       <Intro />
       <Donuts />
 
-      {/* Reusable scroll gallery transition section*/}
+      {/* Reusable scroll gallery transition section
+      1st scroll portion, leads to the WDC section */}
       <ScrollGallery />
 
-      {/* 1st scroll portion of the site - Drivers championships*/}
+      {/*Drivers Championships Section*/}
       <WDC />
+
+      {/* 2nd scroll portion of the site - leads to the Wins section*/}
       <ScrollGallery />
 
-      {/* 2nd scroll portion of the site - wins*/}
+      {/*Wins Section*/}
       <Wins />
+
+      {/* 3rd scroll portion of the site - leads to the Podiums section*/}
       <ScrollGallery />  
 
+      {/*Podiums Section*/}
       <Podiums />
 
       {/* Ending portion of the site*/}
