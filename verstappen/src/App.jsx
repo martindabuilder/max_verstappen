@@ -7,7 +7,7 @@ import Wins from './components/WinsComps/WinsSection.jsx'
 import Podiums from './components/PodiumsComps/PodiumsSection.jsx'
 import Ending from './components/EndingComps/EndingSection.jsx'
 
-import HorizontalGallery from './shared/HorizontalGallery.jsx'
+import ScrollGallery from './shared/ScrollGallery.jsx'
 
 import './styles/App.css'
 import './styles/IntroStyles/Donuts.css'
@@ -27,20 +27,16 @@ function App() {
       <Donuts />
 
       {/* Reusable scroll gallery transition section*/}
-      <HorizontalGallery />
+      <ScrolllGallery />
 
       {/* 1st scroll portion of the site - Drivers championships*/}
       <WDC />
-      <HorizontalGallery />
-
+      <ScrolllGallery />
+      
       {/* 2nd scroll portion of the site - wins*/}
       <Wins />
-      <HorizontalGallery />
 
-      {/* 3rd scroll portion of the site - podiums*/}
       <Podiums />
-      <HorizontalGallery />
-
 
       {/* Ending portion of the site*/}
       <Ending />

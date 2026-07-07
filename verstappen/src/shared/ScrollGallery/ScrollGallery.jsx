@@ -1,8 +1,9 @@
 import { useRef, useEffect } from "react";
 
-import "./HorizontalGallery.css";
+import "./ScrollGallery.css";
+import ".././data/ScrollGalleryData.js";
 
-function HorizontalGallery() {
+function ScrollGallery() {
   const trackRef = useRef(null);
   
   useEffect(() => {
@@ -10,9 +11,9 @@ function HorizontalGallery() {
   }, []);
 
   return (
-    <section className="horizontal-gallery">
+    <section className="scroll-gallery">
     </section>
   );
 }
 
-export default HorizontalGallery;
+export default ScrollGallery;

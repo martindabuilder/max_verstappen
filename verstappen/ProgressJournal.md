@@ -29,6 +29,7 @@ youtube videos i used for either reference/inspiration/code:
 [React Animation Course with Motion - Become an Animations Pro in 1 Hour](https://www.youtube.com/watch?v=9-fO_2xTpgY)
 [React Native Animated Counter](https://www.youtube.com/watch?v=Rv91NdVtnsw)
 [Create Full Custom Scrollbar Only CSS](https://youtu.be/ZnzjjlliECk?si=y9c9qCZ9eQ82zVit)
+[React Scroll Effects Without External Libraries](https://dev.to/childrentime/react-scroll-effects-without-external-libraries-2k12)
 
 fonts:
 [Raleway](https://fonts.google.com/specimen/Raleway?utm_source=chatgpt.com&preview.text=Max%20Verstappen&specimen.preview.text=Max+Verstappen)
@@ -68,4 +69,6 @@ Still gathering photos for the scroll section, but working on its code and funct
 
 day 11: Some work on the scroll transition section, nothing major tho.
 
-day 12: More work on the scroll transition section, gathering some photos for it.
+day 12: More work on the scroll transition section, gathering some photos for it. Separated it from the other shared components as it's shaping up to have quite a few files in order to be reusable between the other sections. 
+
+day 13:
