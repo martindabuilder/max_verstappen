@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect } from "react";
 
-import logo from "../../assets/images/Intro_images/logo.png";
+import logo from "../../assets/images/Intro_images/MVLogo.png";
 import RB from "../../assets/images/Intro_images/RB.png";
 import "../../styles/IntroStyles/Intro.css";
 

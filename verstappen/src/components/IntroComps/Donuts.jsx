@@ -5,6 +5,7 @@ import { useState, useRef, useEffect } from "react";
 import { AnimatePresence, motion, useInView } from "motion/react";
 
 import donuts from "../../assets/videos/donuts.mp4";
+import RBLogo from "../../assets/images/RBLogo.png";
 
 import "../../styles/IntroStyles/Donuts.css";
 
@@ -18,7 +19,7 @@ function Donuts() {
   const [isFading, setIsFading] = useState(false);
   const hasFaded = useRef(false);
   const [scrollOpacity, setScrollOpacity] = useState(0);
-  const [showRBLogo, setRBLogo] = useState(false);
+  const [showRBLogo, setShowRBLogo] = useState(false);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, {amount: 0.1,});
 
@@ -84,6 +85,14 @@ function Donuts() {
       video.pause();
     }
   }, [isInView]);
+
+  /*handles the RB logo flash effect when the video fades out*/
+  useEffect(() => {
+    if(isFading) return;
+
+    setShowRBLogo(true);
+  }, [isFading]);
+
 
   return (
     <section ref = {sectionRef} className = "donuts">

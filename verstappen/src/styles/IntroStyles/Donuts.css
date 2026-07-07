@@ -89,3 +89,8 @@
             60deg, rgba(255, 0, 0, 0.25), rgba(17, 0, 255, 0.35)
         );
 }
+
+.rb-logo-flash{
+    pointer-events: none;
+    opacity: 0.5;
+}
