@@ -30,6 +30,7 @@ youtube videos i used for either reference/inspiration/code:
 [React Native Animated Counter](https://www.youtube.com/watch?v=Rv91NdVtnsw)
 [Create Full Custom Scrollbar Only CSS](https://youtu.be/ZnzjjlliECk?si=y9c9qCZ9eQ82zVit)
 [React Scroll Effects Without External Libraries](https://dev.to/childrentime/react-scroll-effects-without-external-libraries-2k12)
+[<easing-function> CSS type - MDN Web Docs - Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/easing-function)
 
 fonts:
 [Raleway](https://fonts.google.com/specimen/Raleway?utm_source=chatgpt.com&preview.text=Max%20Verstappen&specimen.preview.text=Max+Verstappen)
@@ -69,6 +70,7 @@ Still gathering photos for the scroll section, but working on its code and funct
 
 day 11: Some work on the scroll transition section, nothing major tho.
 
-day 12: More work on the scroll transition section, gathering some photos for it. Separated it from the other shared components as it's shaping up to have quite a few files in order to be reusable between the other sections. 
+day 12: More work on the scroll transition section, gathering some photos for it but still figuring it out in terms of code and functionalities. Also separated it from the other shared components as it's shaping up to have quite a few files in order to be reusable between the other sections. 
+Added a brief Red Bull logo flash once the intro video fades to black, but will need to find a better photo to use for it, also want to add a very slight shine animation to it, will refine it a bit alongside the scroll section in the next days.
 
 day 13:

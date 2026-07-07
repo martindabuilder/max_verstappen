@@ -18,6 +18,8 @@
     font-size: 1.3rem;
     font-family: 'Space Grotesk', sans-serif;
     margin-top: 10px;
+
+    z-index: 2;
 }
 
 text {

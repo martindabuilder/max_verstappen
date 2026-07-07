@@ -90,7 +90,14 @@
         );
 }
 
+/*Red Bull logo flash effect when the video fades out briefly*/
 .rb-logo-flash{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: auto;
+
+    z-index: 1;
+
     pointer-events: none;
-    opacity: 0.5;
 }

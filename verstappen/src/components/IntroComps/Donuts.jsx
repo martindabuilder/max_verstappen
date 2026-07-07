@@ -5,7 +5,7 @@ import { useState, useRef, useEffect } from "react";
 import { AnimatePresence, motion, useInView } from "motion/react";
 
 import donuts from "../../assets/videos/donuts.mp4";
-import RBLogo from "../../assets/images/RBLogo.png";
+import RBLogo from "../../assets/images/Intro_images/RBLogo.png";
 
 import "../../styles/IntroStyles/Donuts.css";
 
@@ -18,8 +18,8 @@ function Donuts() {
   const videoRef = useRef(null);
   const [isFading, setIsFading] = useState(false);
   const hasFaded = useRef(false);
-  const [scrollOpacity, setScrollOpacity] = useState(0);
   const [showRBLogo, setShowRBLogo] = useState(false);
+  const [scrollOpacity, setScrollOpacity] = useState(0);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, {amount: 0.1,});
 
@@ -88,9 +88,12 @@ function Donuts() {
 
   /*handles the RB logo flash effect when the video fades out*/
   useEffect(() => {
-    if(isFading) return;
+    if (!isFading) return;
 
     setShowRBLogo(true);
+    const timer = setTimeout(() => setShowRBLogo(false), 500);
+
+    return () => clearTimeout(timer);
   }, [isFading]);
 
 
@@ -129,6 +132,19 @@ function Donuts() {
 
       <NoiseOverlay enabled = {isInView}/>
       <IntroGradient enabled = {isInView}/>
+
+      <AnimatePresence>
+        {showRBLogo && (
+          <motion.img
+            src={RBLogo}
+            alt="RB"
+            className="rb-logo-flash"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 0.30, scale: 1 }}
+            exit={{ opacity: 0, scale: 1.05 }}
+            transition={{ duration: 0.8, ease: "ease" }}/>
+        )}
+      </AnimatePresence>
       
       <ScrollHint />
       <IntroText />
