@@ -11,9 +11,12 @@ import img3 from "../assets/images/WDCSCrollGallery/img3.jpg";
 /*SC 3*/
 
 export const scrollGallery1 = {
-    title: "Championship era",
-    images: [img1, img2, img3]
-}
+    images: [
+        { id: 1, src: img1, alt: "Bahrain 2021", size: "md" },
+        { id: 2, src: img2, alt: "Bahrain 2021", size: "lg" },
+        { id: 3, src: img3, alt: "Bahrain 2021", size: "sm" },
+    ],
+};
 
 export const scrollGallery2 = {
     title: "Winning streak",

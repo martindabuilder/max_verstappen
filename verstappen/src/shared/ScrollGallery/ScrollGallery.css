@@ -1,8 +1,0 @@
-.scroll-gallery{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    height: 200vh;
-    background-color: black;
-    color: white;
-    pointer-events: none;
-}
