@@ -16,3 +16,11 @@
     overflow: hidden;
     pointer-events: none;
 }
+
+.scroll-gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}

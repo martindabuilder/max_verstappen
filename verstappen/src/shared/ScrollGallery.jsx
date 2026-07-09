@@ -6,7 +6,7 @@ import { motion, useInView } from "motion/react";
 
 import "./ScrollGallery.css";
 
-function GalleryCards({ image, direction, delay }){
+function GalleryCards({ image, direction, delay }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
@@ -16,11 +16,12 @@ function GalleryCards({ image, direction, delay }){
       x: direction === "right" ? 80 : direction === "left" ? -80 : 0,
       y: direction === "bottom" ? 80 : 30,
     },
+
     visible: {
       opacity: 1,
       x: 0,
       y: 0,
-    }
+    },
   };
 
   return(
@@ -32,6 +33,12 @@ function GalleryCards({ image, direction, delay }){
     transition = {{ duration: 0.8, delay, ease: "easeInOut" }}
     animate = {isInView ? "visible" : "hidden"}>
 
+      {image.labelPosition === "top" && (
+        <span className = "gallery-label gallery-label--top">
+          {image.label}
+        </span>
+      )}
+
       <div className = "gallery-images">
         <img src = {image.src} alt = {image.alt} />
       </div>
@@ -41,18 +48,36 @@ function GalleryCards({ image, direction, delay }){
 }
 
 function Columns({ images, direction }){
+
   return (
     <div className = "gallery-columns">
-      
+      {images.map((image, index) => (
+        <GalleryCards
+          key = {image.id} 
+          image = {image} 
+          direction = {direction} 
+          delay = {index * 0.3}
+        />
+      ))}
+
     </div>
   )
 }
 
-function ScrollGallery(){
+function ScrollGallery({ images = [] }){
+  
   return (
-    <div className = "scroll-gallery-section">
+    <section className = "scroll-gallery-section">
 
-    </div>
+      <div className = "scroll-gallery-grid">
+
+        <GalleryColumns images = {left} direction = "left" />
+        <GalleryColumns images = {center} direction = "bottom" />
+        <GalleryColumns images = {right} direction = "right" />
+
+      </div>
+
+    </section>
   )
 
 }

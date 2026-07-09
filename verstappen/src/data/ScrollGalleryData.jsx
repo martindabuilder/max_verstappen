@@ -17,13 +17,3 @@ export const scrollGallery1 = {
         { id: 3, src: img3, alt: "Bahrain 2021", size: "sm" },
     ],
 };
-
-export const scrollGallery2 = {
-    title: "Winning streak",
-    images: [img1, img2, img3]
-}
-
-export const scrollGallery3 = {
-    title: "Podium moments",
-    images: [img1, img2, img3]
-}

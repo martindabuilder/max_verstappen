@@ -34,13 +34,11 @@ function App() {
       <WDC />
 
       {/* 2nd scroll portion of the site - leads to the Wins section*/}
-      <ScrollGallery />
 
       {/*Wins Section*/}
       <Wins />
 
       {/* 3rd scroll portion of the site - leads to the Podiums section*/}
-      <ScrollGallery />  
 
       {/*Podiums Section*/}
       <Podiums />
