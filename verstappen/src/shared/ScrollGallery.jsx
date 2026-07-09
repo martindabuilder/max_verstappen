@@ -8,7 +8,7 @@ import "./ScrollGallery.css";
 
 function GalleryCards({ image, direction, delay }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
+  const isInView = useInView(ref, { once: true, amount: 0.4 });
 
   const variants = {
     hidden: {
@@ -27,7 +27,7 @@ function GalleryCards({ image, direction, delay }) {
   return(
     <motion.div 
     ref = {ref}
-    className = {"scroll-gallery-wrapper ${image.size}"}
+    className = {`scroll-gallery-wrapper ${image.size}`}
     variants = {variants}
     initial = "hidden" 
     transition = {{ duration: 0.8, delay, ease: "easeInOut" }}
@@ -75,9 +75,9 @@ function ScrollGallery({ images = [] }){
 
       <div className = "scroll-gallery-grid">
 
-        <GalleryColumns images = {left} direction = "left" />
-        <GalleryColumns images = {center} direction = "bottom" />
-        <GalleryColumns images = {right} direction = "right" />
+        <Columns images = {left} direction = "left" />
+        <Columns images = {center} direction = "bottom" />
+        <Columns images = {right} direction = "right" />
 
       </div>
 

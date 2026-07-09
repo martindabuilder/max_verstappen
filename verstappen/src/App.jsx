@@ -29,7 +29,7 @@ function App() {
 
       {/* Reusable scroll gallery transition section
       1st scroll portion, leads to the WDC section */}
-      <ScrollGallery />
+      <ScrollGallery images = {scrollGallery1.images} />
 
       {/*Drivers Championships Section*/}
       <WDC />

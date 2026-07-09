@@ -5,6 +5,7 @@ contains the logic for the images for the 1st, 2nd and 3rd scroll sections*/
 import img1 from "../assets/images/WDCSCrollGallery/img1.jpg";
 import img2 from "../assets/images/WDCSCrollGallery/img2.jpg";
 import img3 from "../assets/images/WDCSCrollGallery/img3.jpg";
+import img4 from "../assets/images/WDCSCrollGallery/img4.jpg";
 
 /*SC 2*/
 
@@ -12,6 +13,9 @@ import img3 from "../assets/images/WDCSCrollGallery/img3.jpg";
 
 export const scrollGallery1 = {
     images: [
-        { id: 1, src: img1, label: "Bahrain 2021", size: "md", column: "left", labelPosition: "top", labelPosition: "bottom"},
+        { id: 1, src: img1, label: "Bahrain 2021", size: "md", column: "left", labelPosition: "bottom"},
+        { id: 2, src: img2, label: "Monaco 2021", size: "sm", column: "center", labelPosition: "top"},
+        { id: 3, src: img3, label: "Abu Dhabi 2021", size: "md", column: "right", labelPosition: "bottom"},
+        { id: 4, src: img4, label: "Bahrain 2021", size: "md", column: "left", labelPosition: "top"},
     ],
 };
