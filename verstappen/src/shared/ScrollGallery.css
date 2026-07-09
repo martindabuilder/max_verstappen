@@ -16,7 +16,14 @@
 
 .gallery-columns {}
 
-.gallery-wrapper{}
+.scroll-gallery-wrapper{}
+
+.scroll-gallery-wrapper.sm{}
+.scroll-gallery-wrapper.md{}
+.scroll-gallery-wrapper.lg{}
+.scroll-gallery-wrapper.tall{}
+
+.gallery-label {}
 
 .gallery-label--top{}
 

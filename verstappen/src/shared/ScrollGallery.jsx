@@ -34,7 +34,7 @@ function ScrollGallery({ images = [] }){
 
 function GalleryCards({ image }) {
   return (
-    <div className={`gallery-wrapper ${image.size}`}>
+    <div className={`scroll-gallery-wrapper ${image.size}`}>
 
       {image.labelPosition === "top" && (
         <span className = "gallery-label gallery-label--top">
