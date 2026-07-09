@@ -59,14 +59,15 @@ function Donuts() {
     const onScroll = () => {
       const video = videoRef.current;
       const progress = Math.min(window.scrollY / window.innerHeight, 1);
+      const easedProgress = 1 - Math.pow(1 - progress, 2.2);
 
       if (video) {
-        video.style.filter    = `blur(${progress * 12}px)`;
-        video.style.transform = `scale(${1.3 + progress * 0.08})`;
-        video.playbackRate    = Math.max(1 - progress * 0.9, 0.7);
+        video.style.filter    = `blur(${easedProgress * 12}px)`;
+        video.style.transform = `scale(${1.3 + easedProgress * 0.08})`;
+        video.playbackRate    = Math.max(1 - easedProgress * 0.9, 0.7);
       }
 
-      setScrollOpacity(progress);
+      setScrollOpacity(easedProgress);
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });

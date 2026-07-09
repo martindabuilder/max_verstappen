@@ -2,7 +2,7 @@
 will be used inebwteen the 3 major sections of the site*/
 
 import { useRef } from "react";
-import { motion, useInView } from "motion/react";
+import { motion, useInView, useTransform } from "motion/react";
 
 import "./ScrollGallery.css";
 

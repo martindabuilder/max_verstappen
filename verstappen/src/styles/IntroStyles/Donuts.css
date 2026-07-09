@@ -1,6 +1,6 @@
 .donuts {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -29,13 +29,18 @@
     z-index: 0;
 }
 
+/*black gradient fade once the video is scrolled down*/
 .scroll-fade-overlay {
     position: absolute;
     inset: 0;
-    background: black;
+    background: linear-gradient(
+        to bottom,
+        transparent 40%,  /* горната част остава прозрачна */
+        black 100%        /* долната е черна */
+    );
     pointer-events: none;
-    z-index: 1;
-    transition: opacity 0.05s linear;
+    z-index: 9999;
+    transition: opacity 0.16s ease-out;
 }
 
 /*noise overlay used for the video intro portion*/
