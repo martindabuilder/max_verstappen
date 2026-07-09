@@ -66,6 +66,10 @@ function Columns({ images, direction }){
 
 function ScrollGallery({ images = [] }){
   
+  const left = images.filter(image => image.column === "left");
+  const center = images.filter(image => image.column === "center");
+  const right = images.filter(image => image.column === "right");
+
   return (
     <section className = "scroll-gallery-section">
 

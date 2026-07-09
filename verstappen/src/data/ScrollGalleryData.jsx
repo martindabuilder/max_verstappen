@@ -12,8 +12,6 @@ import img3 from "../assets/images/WDCSCrollGallery/img3.jpg";
 
 export const scrollGallery1 = {
     images: [
-        { id: 1, src: img1, alt: "Bahrain 2021", size: "md" },
-        { id: 2, src: img2, alt: "Bahrain 2021", size: "lg" },
-        { id: 3, src: img3, alt: "Bahrain 2021", size: "sm" },
+        { id: 1, src: img1, label: "Bahrain 2021", size: "md", column: "left", labelPosition: "top", labelPosition: "bottom"},
     ],
 };

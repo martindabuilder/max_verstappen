@@ -8,6 +8,7 @@ import Podiums from './components/PodiumsComps/PodiumsSection.jsx'
 import Ending from './components/EndingComps/EndingSection.jsx'
 
 import ScrollGallery from './shared/ScrollGallery.jsx'
+import { scrollGallery1 } from './data/ScrollGalleryData.jsx'
 
 import './styles/App.css'
 import './styles/IntroStyles/Donuts.css'
