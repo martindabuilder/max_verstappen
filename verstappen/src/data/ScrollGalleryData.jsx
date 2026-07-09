@@ -13,9 +13,9 @@ import img4 from "../assets/images/WDCSCrollGallery/img4.jpg";
 
 export const scrollGallery1 = {
     images: [
-        { id: 1, src: img1, label: "Bahrain 2021", size: "md", column: "left", labelPosition: "bottom"},
-        { id: 2, src: img2, label: "Monaco 2021", size: "sm", column: "center", labelPosition: "top"},
-        { id: 3, src: img3, label: "Abu Dhabi 2021", size: "md", column: "right", labelPosition: "bottom"},
-        { id: 4, src: img4, label: "Bahrain 2021", size: "md", column: "left", labelPosition: "top"},
+        { id: 1, src: img1, label: "text 1", size: "md", column: "left", labelPosition: "bottom"},
+        { id: 2, src: img2, label: "text 2", size: "sm", column: "center", labelPosition: "top"},
+        { id: 3, src: img3, label: "text 3", size: "md", column: "right", labelPosition: "bottom"},
+        { id: 4, src: img4, label: "text 4", size: "md", column: "left", labelPosition: "top"},
     ],
 };

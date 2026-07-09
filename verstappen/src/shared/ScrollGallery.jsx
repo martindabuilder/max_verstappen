@@ -6,32 +6,35 @@ import { motion, useInView, useTransform } from "motion/react";
 
 import "./ScrollGallery.css";
 
-function GalleryCards({ image, direction, delay }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.4 });
+function ScrollGallery({ images = [] }){
+  const sectionRef = useRef(null);
 
-  const variants = {
-    hidden: {
-      opacity: 0,
-      x: direction === "right" ? 80 : direction === "left" ? -80 : 0,
-      y: direction === "bottom" ? 80 : 30,
-    },
+  const { scrollYProgress } = useScroll({target: sectionRef, offset: ["start end", "end start"]});
+  
+  const x = useTransform(ScrollYProgress, [0, 0.6], ["80vw", "0vw"]);
 
-    visible: {
-      opacity: 1,
-      x: 0,
-      y: 0,
-    },
-  };
+  const left = images.filter(image => image.column === "left");
+  const center = images.filter(image => image.column === "center");
+  const right = images.filter(image => image.column === "right");
 
-  return(
-    <motion.div 
-    ref = {ref}
-    className = {`scroll-gallery-wrapper ${image.size}`}
-    variants = {variants}
-    initial = "hidden" 
-    transition = {{ duration: 0.8, delay, ease: "easeInOut" }}
-    animate = {isInView ? "visible" : "hidden"}>
+  return (
+    <section ref = {sectionRef} className = "scroll-gallery-section">
+      <motion.div className = "Scroll-gallery-grid" style = {{ x }}>
+        
+        <div className = "gallery-columns">
+          {left.map(image => <GalleryCards key={image.id} image={image} />)}
+          {center.map(image => <GalleryCards key={image.id} image={image} />)}
+          {right.map(image => <GalleryCards key={image.id} image={image} />)}
+        </div>
+
+      </motion.div>
+    </section>
+  )
+}
+
+function GalleryCards({ image }) {
+  return (
+    <div className={`gallery-wrapper ${image.size}`}>
 
       {image.labelPosition === "top" && (
         <span className = "gallery-label gallery-label--top">
@@ -40,50 +43,12 @@ function GalleryCards({ image, direction, delay }) {
       )}
 
       <div className = "gallery-images">
-        <img src = {image.src} alt = {image.alt} />
+        <img src = {image.src} alt = {image.label} />
       </div>
-
-    </motion.div>
-  )
-}
-
-function Columns({ images, direction }){
-
-  return (
-    <div className = "gallery-columns">
-      {images.map((image, index) => (
-        <GalleryCards
-          key = {image.id} 
-          image = {image} 
-          direction = {direction} 
-          delay = {index * 0.3}
-        />
-      ))}
 
     </div>
   )
 }
 
-function ScrollGallery({ images = [] }){
-  
-  const left = images.filter(image => image.column === "left");
-  const center = images.filter(image => image.column === "center");
-  const right = images.filter(image => image.column === "right");
-
-  return (
-    <section className = "scroll-gallery-section">
-
-      <div className = "scroll-gallery-grid">
-
-        <Columns images = {left} direction = "left" />
-        <Columns images = {center} direction = "bottom" />
-        <Columns images = {right} direction = "right" />
-
-      </div>
-
-    </section>
-  )
-
-}
 
 export default ScrollGallery;

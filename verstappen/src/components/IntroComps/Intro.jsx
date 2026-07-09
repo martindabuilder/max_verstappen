@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 
 import logo from "../../assets/images/Intro_images/MVLogo.png";
 import RB from "../../assets/images/Intro_images/RBLogo.png";
+
 import "../../styles/IntroStyles/Intro.css";
 
 function Intro() {

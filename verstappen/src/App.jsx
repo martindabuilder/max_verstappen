@@ -11,10 +11,9 @@ import ScrollGallery from './shared/ScrollGallery.jsx'
 import { scrollGallery1 } from './data/ScrollGalleryData.jsx'
 
 import './styles/App.css'
-import './styles/IntroStyles/Donuts.css'
-
 
 function App() {
+
   /*On refresh the page starts from the top again*/
   useEffect(() => {
     window.scrollRestoration = 'manual'
