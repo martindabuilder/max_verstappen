@@ -73,4 +73,4 @@ day 10: More work on the scroll transition section, gathering some photos for it
 Added a brief Red Bull logo flash once the intro video fades to black, but will need to find a better photo to use for it, also want to add a very slight shine animation to it, will refine it a bit alongside the scroll section in the next days.
 
 day 11: Will do some more work on the intro video as i want to add more clips to it (with better quality too). Added a new folder where ill add on wips for the later sections as i have very little defined ideas for how those would look currently. Added also files in preparation for a custom scroll bar later on.
-More work on the scroll transition section, as im trying to figure out its code and functionalities but its currently breaking the site, will need to fix it up and figure it out.
+More work on the scroll transition section, as im trying to figure out its code and functionalities but its currently breaking the site, will need to fix it up and figure it out. Will work on the animation and sizing on it aswell as its far from perfect for now.
