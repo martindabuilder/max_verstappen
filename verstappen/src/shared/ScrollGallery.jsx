@@ -3,47 +3,62 @@ will be used inebwteen the 3 major sections of the site*/
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-
 import "./ScrollGallery.css";
 
-function ScrollGallery({ images = [] }){
-  const sectionRef = useRef(null);
+function ScrollGallery({ images = [] }) {
+    const sectionRef = useRef(null);
 
-  const { scrollYProgress } = useScroll({target: sectionRef, offset: ["start start", "end end"]});
-  
-  const x = useTransform(scrollYProgress, [0, 0.5], ["100vw", "0vw"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ["start start", "end end"],
+    });
 
-  const left = images.filter(image => image.column === "left");
-  const center = images.filter(image => image.column === "center");
-  const right = images.filter(image => image.column === "right");
+    const x = useTransform(scrollYProgress, [0, 0.5], ["100vw", "0vw"]);
 
-  return (
-    <section ref = {sectionRef} className = "scroll-gallery-section">
-      <motion.div className = "scroll-gallery-canvas" style = {{ x }}>
-        
-      </motion.div>
-    </section>
-  )
+    return (
+        <section ref={sectionRef} className="scroll-gallery-section">
+            <div className="scroll-gallery-sticky">
+                <motion.div className="scroll-gallery-canvas" style={{ x }}>
+
+                    {images.map((image) => (
+                        <GalleryCard key={image.id} image={image} />
+                    ))}
+                    
+                </motion.div>
+            </div>
+        </section>
+    );
 }
 
-function GalleryCards({ image }) {
+function GalleryCard({ image }) {
   return (
-    <div className={`scroll-gallery-wrapper ${image.size}`}>
+    <div
+      className={`gallery-card-item ${image.size}`}
+        style={{
+          position: "absolute",
+          top:      image.top,
+          left:     image.left,
+          width:    image.width,
+          transform: `rotate(${image.rotate || "0deg"})`,
+        }}>
 
-      {image.labelPosition === "top" && (
-        <span className = "gallery-label gallery-label--top">
-          {image.label}
-        </span>
-      )}
+        {image.labelPosition === "top" && (
+          <span className="gallery-label gallery-label--top">
+            {image.label}
+          </span>
+        )}
 
-      <div className = "gallery-images">
-        <img src = {image.src} alt = {image.label} />
-      </div>
+        <div className="gallery-images">
+          <img src={image.src} alt={image.label} />
+        </div>
 
-    </div>
-  )
-}
-
+        {(!image.labelPosition || image.labelPosition === "bottom") && (
+          <span className="gallery-label gallery-label--bottom">
+            {image.label}
+          </span>
+          )}
+        </div>
+    );
+  }
 
 export default ScrollGallery;
