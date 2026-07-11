@@ -2,7 +2,7 @@
 will be used inebwteen the 3 major sections of the site*/
 
 import { useRef } from "react";
-import { motion, useInView, useTransform } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 
 import "./ScrollGallery.css";
 
@@ -11,7 +11,7 @@ function ScrollGallery({ images = [] }){
 
   const { scrollYProgress } = useScroll({target: sectionRef, offset: ["start end", "end start"]});
   
-  const x = useTransform(ScrollYProgress, [0, 0.6], ["80vw", "0vw"]);
+  const x = useTransform(scrollYProgress, [0, 0.6], ["80vw", "0vw"]);
 
   const left = images.filter(image => image.column === "left");
   const center = images.filter(image => image.column === "center");
@@ -19,11 +19,17 @@ function ScrollGallery({ images = [] }){
 
   return (
     <section ref = {sectionRef} className = "scroll-gallery-section">
-      <motion.div className = "Scroll-gallery-grid" style = {{ x }}>
+      <motion.div className = "scroll-gallery-grid" style = {{ x }}>
         
         <div className = "gallery-columns">
           {left.map(image => <GalleryCards key={image.id} image={image} />)}
+        </div>
+
+        <div className = "gallery-columns">
           {center.map(image => <GalleryCards key={image.id} image={image} />)}
+        </div>
+
+        <div className = "gallery-columns">
           {right.map(image => <GalleryCards key={image.id} image={image} />)}
         </div>
 
