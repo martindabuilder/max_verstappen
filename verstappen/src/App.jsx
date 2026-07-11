@@ -8,7 +8,7 @@ import Podiums from './components/PodiumsComps/PodiumsSection.jsx'
 import Ending from './components/EndingComps/EndingSection.jsx'
 
 import ScrollGallery from './shared/ScrollGallery.jsx'
-import { scrollGallery1 } from './data/ScrollGalleryData.jsx'
+import { scrollGallery1, scrollGallery2, scrollGallery3 } from './data/ScrollGalleryData.jsx'
 
 import './styles/App.css'
 
@@ -34,11 +34,13 @@ function App() {
       <WDC />
 
       {/* 2nd scroll portion of the site - leads to the Wins section*/}
+      <ScrollGallery images = {scrollGallery2.images} />
 
       {/*Wins Section*/}
       <Wins />
 
       {/* 3rd scroll portion of the site - leads to the Podiums section*/}
+      <ScrollGallery images = {scrollGallery3.images} />
 
       {/*Podiums Section*/}
       <Podiums />
