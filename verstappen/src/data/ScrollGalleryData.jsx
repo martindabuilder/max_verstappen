@@ -27,7 +27,6 @@ export const scrollGallery1 = {
 };
 
 export const scrollGallery2 = {
-    /*
   images: [
         { id: 1, src: img5, label: "label", size: "md", width: "220px", top: "10vh", left: "4%", labelPosition: "top", },
         { id: 2, src: img6, label: "label", size: "lg", width: "220px", top: "20vh", left: "4%", labelPosition: "bottom", },
@@ -36,7 +35,6 @@ export const scrollGallery2 = {
         { id: 5, src: img9, label: "label", size: "lg", width: "220px", top: "30vh", left: "4%", labelPosition: "top", },
 
     ],
-    */
 };
 
 export const scrollGallery3 = {
