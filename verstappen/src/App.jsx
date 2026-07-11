@@ -36,11 +36,11 @@ function App() {
       {/* 2nd scroll portion of the site - leads to the Wins section*/}
       <ScrollGallery images = {scrollGallery2.images} />
 
-
       {/*Wins Section*/}
       <Wins />
 
       {/* 3rd scroll portion of the site - leads to the Podiums section*/}
+      <ScrollGallery images = {scrollGallery3.images} />
 
       {/*Podiums Section*/}
       <Podiums />

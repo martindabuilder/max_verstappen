@@ -9,6 +9,8 @@ documentations and other online references:
 [Cursor-reactive gradients - dev.to](https://dev.to/sammiihk/cursor-reactive-gradients-making-css-respond-to-mouse-position-5ga3)
 [CSS Background Effects - prismic](https://prismic.io/blog/css-background-effects)
 [Scroll blur and moving noise with React, Motion, and CSS](https://medium.com/@moraromerojuan8/scroll-blur-and-moving-noise-with-react-motion-and-css-49922adbbdda)
+[Horizontal scroll section](https://motion.dev/docs/react-scroll-animations)
+[lenis.dev](https://www.lenis.dev/)
 
 Text animations:
 [Scroll Reveal](https://reactbits.dev/text-animations/scroll-reveal)
@@ -31,6 +33,9 @@ youtube videos i used for either reference/inspiration/code:
 [Create Full Custom Scrollbar Only CSS](https://youtu.be/ZnzjjlliECk?si=y9c9qCZ9eQ82zVit)
 [React Scroll Effects Without External Libraries](https://dev.to/childrentime/react-scroll-effects-without-external-libraries-2k12)
 [<easing-function> CSS type - MDN Web Docs - Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/easing-function)
+[Horizontal Scrolling Animation with React and Framer Motion](https://www.youtube.com/watch?v=4ehYkfh7P-I)
+[Create a Horizontal Scroll Carousel in React with Framer Motion](https://www.youtube.com/watch?v=g8pcxzDl-w8)
+
 
 fonts:
 [Raleway](https://fonts.google.com/specimen/Raleway?utm_source=chatgpt.com&preview.text=Max%20Verstappen&specimen.preview.text=Max+Verstappen)
