@@ -9,7 +9,7 @@ function ScrollGallery({ images = [] }) {
 
     const sectionRef = useRef(null);
     const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end end"], });
-    const x = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], ["100vw", "0vw", "0vw", "0vw"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["100vw", "-100vw"]);
 
     return (
         <section ref={sectionRef} className = "scroll-gallery-section">
@@ -30,12 +30,14 @@ function GalleryCard({ image }) {
   return (
     <div
       className = {`gallery-card-item ${image.size}`}
+
         style={{
           position: "absolute",
-          top: image.top,
+          top: "50%",
           left: image.left,
           width: image.width,
-          transform: `rotate(${image.rotate || "0deg"})`,
+          transform: `translateY(calc(-50% + ${image.offsetY || "0px"}))
+          rotate(${image.rotate || "0deg"})`,        
         }}>
 
         {image.labelPosition === "top" && (

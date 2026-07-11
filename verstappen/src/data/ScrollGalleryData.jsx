@@ -19,14 +19,15 @@ import img9 from "../assets/images/WinsScrollGallery/img5.jpg";
 
 export const scrollGallery1 = {
     images: [
-        { id: 1, src: img1, label: "label", size: "sm", width: "220px", top: "10vh", left: "4%", labelPosition: "top", },
-        { id: 2, src: img2, label: "label", size: "lg", width: "400px", top: "20vh", left: "25%", labelPosition: "bottom", },
-        { id: 3, src: img3, label: "label", size: "sm", width: "200px", top: "8vh", left: "60%", labelPosition: "top", },
+        { id: 1, src: img1, label: "label", size: "sm", width: "220px", top: "50vh", left: "4%", labelPosition: "top", },
+        { id: 2, src: img2, label: "label", size: "lg", width: "400px", top: "60vh", left: "25%", labelPosition: "bottom", },
+        { id: 3, src: img3, label: "label", size: "sm", width: "200px", top: "180vh", left: "60%", labelPosition: "top", },
         { id: 4, src: img4, label: "label", size: "md", width: "300px", top: "52vh", left: "68%", labelPosition: "bottom", },
     ],
 };
 
 export const scrollGallery2 = {
+    /*
   images: [
         { id: 1, src: img5, label: "label", size: "md", width: "220px", top: "10vh", left: "4%", labelPosition: "top", },
         { id: 2, src: img6, label: "label", size: "lg", width: "220px", top: "20vh", left: "4%", labelPosition: "bottom", },
@@ -35,6 +36,7 @@ export const scrollGallery2 = {
         { id: 5, src: img9, label: "label", size: "lg", width: "220px", top: "30vh", left: "4%", labelPosition: "top", },
 
     ],
+    */
 };
 
 export const scrollGallery3 = {
