@@ -11,6 +11,7 @@ documentations and other online references:
 [Scroll blur and moving noise with React, Motion, and CSS](https://medium.com/@moraromerojuan8/scroll-blur-and-moving-noise-with-react-motion-and-css-49922adbbdda)
 [Horizontal scroll section](https://motion.dev/docs/react-scroll-animations)
 [lenis.dev](https://www.lenis.dev/)
+[CSS The overflow Property](https://www.w3schools.com/css/css_overflow.asp)
 
 Text animations:
 [Scroll Reveal](https://reactbits.dev/text-animations/scroll-reveal)
@@ -26,16 +27,24 @@ gradients and noise:
 
 youtube videos i used for either reference/inspiration/code:
 [Page Transitions- developedbyed](https://www.youtube.com/watch?v=S4HYwsBRpRs)
+
 [CSS Morphing Gradients Animated Background - WeCoded](https://youtu.be/Ml-B-W91gtw?si=7O2-4uc3bArIu8Rd)
+
 [Animated noise with CSS only shouldnt be possible!](https://www.youtube.com/watch?v=SxFNqnSOgh0)
 [React Animation Course with Motion - Become an Animations Pro in 1 Hour](https://www.youtube.com/watch?v=9-fO_2xTpgY)
+
+
 [React Native Animated Counter](https://www.youtube.com/watch?v=Rv91NdVtnsw)
+
+
+[React scroll animation - scroll progress bar](https://motion.dev/docs/react-scroll-animations)
 [Create Full Custom Scrollbar Only CSS](https://youtu.be/ZnzjjlliECk?si=y9c9qCZ9eQ82zVit)
+[CSS scrollbars styling](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scrollbars_styling)
+
 [React Scroll Effects Without External Libraries](https://dev.to/childrentime/react-scroll-effects-without-external-libraries-2k12)
 [<easing-function> CSS type - MDN Web Docs - Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/easing-function)
 [Horizontal Scrolling Animation with React and Framer Motion](https://www.youtube.com/watch?v=4ehYkfh7P-I)
 [Create a Horizontal Scroll Carousel in React with Framer Motion](https://www.youtube.com/watch?v=g8pcxzDl-w8)
-
 
 fonts:
 [Raleway](https://fonts.google.com/specimen/Raleway?utm_source=chatgpt.com&preview.text=Max%20Verstappen&specimen.preview.text=Max+Verstappen)
@@ -46,6 +55,7 @@ footage:
 [MAX VERSTAPPEN 2025 SEASON BEST SCENEPACK | F1 SCENEPACK | 4K CLIPS | SCENESBYZERO](https://www.youtube.com/watch?v=yK_bVeZRa3Y)
 [Max verstappen 4K scenepack](https://www.youtube.com/watch?v=6b6ZbXzQgpY)
 
+<-- PROGRESS REPORTS -->
 Rough timeline of the work progress day by day:
 
 Day 1: Mostly setup on the project itself, starting up the react server etc.
@@ -82,5 +92,6 @@ Added a brief Red Bull logo flash once the intro video fades to black, but will 
 Day 11: Will do some more work on the intro video as i want to add more clips to it (with better quality too). Added a new folder where ill add on wips for the later sections as i have very little defined ideas for how those would look currently. Added also files in preparation for a custom scroll bar later on.
 More work on the scroll transition section, as im trying to figure out its code and functionalities but its currently breaking the site, will need to fix it up and figure it out. Will work on the animation and sizing on it aswell as its far from perfect for now.
 
-Day 12: Scroll section is semi complete now, will need to improve it visually but it can be used for different photos in different places so its good progress so far. Will definitely work more on making each of its uses a bit more different than the other, aswell as gather more photos for each going forward.
-Working on a better intro video loop aswell, as i found more high quality footage that will be cooler to use than the current one so far, will also touch up the small Rb logo flash when the video fades to black, its a smaller thing for now so im leaving it as is but definitely have better ideas for it.
+Day 12: Scroll section is semi complete now, will need to improve it visually but it can be used for different photos in different places so its good progress so far. After *a lot* of trial and error the code finally works properly aswell so the main part of the battle is over for now thankfully. Will definitely work more on making each of its uses a bit more different than the other, aswell as gather more photos for each going forward, but good progress for now.
+Made a better intro video loop aswell, as i found better high quality footage that are a lot cooler to use than the previous one, will also touch up the small RB logo flash when the video fades to black, its a smaller thing for now so im leaving it as is but definitely have better ideas for it.
+Starting some rough work on a custom scroll bar for the top of the site aswell.

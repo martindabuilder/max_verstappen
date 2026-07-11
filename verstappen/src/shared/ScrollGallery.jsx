@@ -1,20 +1,33 @@
 /*Reusable scroll section component, 
 will be used inbetween the 3 major sections of the site*/
 
-import { useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import "./ScrollGallery.css";
 
 function ScrollGallery({ images = [] }) {
 
   const sectionRef = useRef(null);
+  const canvasRef = useRef(null);
+  const [shiftLeft, setShiftLeft] = useState(0);
+  const sectionHeight = shiftLeft > 0 ? `${window.innerHeight + shiftLeft}px` : "100vh";
+
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end end"], });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
+  const x = useTransform(scrollYProgress, [0, 1], [2500, -shiftLeft]);
+
+  useLayoutEffect(() => {
+    if (!canvasRef.current || !sectionRef.current) return;
+
+    const canvasWidth  = canvasRef.current.scrollWidth;
+    const sectionWidth = sectionRef.current.offsetWidth;
+
+    setShiftLeft(Math.max(0, canvasWidth - sectionWidth));
+  }, [images]);
 
   return (
-    <section ref={sectionRef} className="scroll-gallery-section">
+    <section ref={sectionRef} className="scroll-gallery-section" style={{ height: sectionHeight }}>
       <div className="scroll-gallery-sticky">
-        <motion.div className="scroll-gallery-canvas" style={{ x }}>
+        <motion.div ref = {canvasRef} className="scroll-gallery-canvas" style={{ x }}>
 
           {images.map((image) => (
             <GalleryCard key={image.id} image={image} />

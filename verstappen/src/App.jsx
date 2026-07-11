@@ -10,6 +10,8 @@ import Ending from './components/EndingComps/EndingSection.jsx'
 import ScrollGallery from './shared/ScrollGallery.jsx'
 import { scrollGallery1, scrollGallery2, scrollGallery3 } from './data/ScrollGalleryData.jsx'
 
+import ScrollBar from './shared/ScrollBar.jsx'
+
 import './styles/App.css'
 
 function App() {
@@ -22,6 +24,9 @@ function App() {
 
   return (
     <>
+      {/*custom scrollbar element*/}
+      <ScrollBar />
+
       {/* intro portion of the site */}
       <Intro />
       <Donuts />

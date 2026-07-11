@@ -21,6 +21,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 30px;
+  padding: 0 4rem;
   min-width: max-content;
   height: 100vh;
 }

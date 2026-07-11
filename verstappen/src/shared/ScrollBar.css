@@ -1,0 +1,12 @@
+.scrollbar {
+    position: fixed;
+    background-color: blue;
+    
+    height: 3px;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 9999;
+}

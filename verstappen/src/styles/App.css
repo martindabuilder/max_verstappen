@@ -11,8 +11,14 @@
 html, body{
   width: 100%;
   min-height: 100%;
-
   scroll-behavior: smooth;
 }
 
 /*custom scrollbar for the future*/
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+}
