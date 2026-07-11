@@ -9,9 +9,10 @@ import "./ScrollGallery.css";
 function ScrollGallery({ images = [] }){
   const sectionRef = useRef(null);
 
-  const { scrollYProgress } = useScroll({target: sectionRef, offset: ["start end", "end start"]});
+  const { scrollYProgress } = useScroll({target: sectionRef, offset: ["start start", "end end"]});
   
-  const x = useTransform(scrollYProgress, [0, 0.6], ["80vw", "0vw"]);
+  const x = useTransform(scrollYProgress, [0, 0.5], ["100vw", "0vw"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
 
   const left = images.filter(image => image.column === "left");
   const center = images.filter(image => image.column === "center");
@@ -19,20 +20,8 @@ function ScrollGallery({ images = [] }){
 
   return (
     <section ref = {sectionRef} className = "scroll-gallery-section">
-      <motion.div className = "scroll-gallery-grid" style = {{ x }}>
+      <motion.div className = "scroll-gallery-canvas" style = {{ x }}>
         
-        <div className = "gallery-columns">
-          {left.map(image => <GalleryCards key={image.id} image={image} />)}
-        </div>
-
-        <div className = "gallery-columns">
-          {center.map(image => <GalleryCards key={image.id} image={image} />)}
-        </div>
-
-        <div className = "gallery-columns">
-          {right.map(image => <GalleryCards key={image.id} image={image} />)}
-        </div>
-
       </motion.div>
     </section>
   )

@@ -16,8 +16,6 @@ import img9 from "../assets/images/WinsScrollGallery/img5.jpg";
 
 /*SC 3*/
 
-
-
 export const scrollGallery1 = {
     images: [
         { id: 1, src: img1, label: "text 1", size: "md", column: "left", labelPosition: "bottom"},

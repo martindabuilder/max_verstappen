@@ -38,39 +38,44 @@ fonts:
 
 footage:
 [Max Verstappen 2024 4K upscaled scenepack || Made By King F1](https://www.youtube.com/watch?v=i89O-9XJAtg)
+[MAX VERSTAPPEN 2025 SEASON BEST SCENEPACK | F1 SCENEPACK | 4K CLIPS | SCENESBYZERO](https://www.youtube.com/watch?v=yK_bVeZRa3Y)
+[Max verstappen 4K scenepack](https://www.youtube.com/watch?v=6b6ZbXzQgpY)
 
 Rough timeline of the work progress day by day:
 
-day 1: Mostly setup on the project itself, starting up the react server etc.
+Day 1: Mostly setup on the project itself, starting up the react server etc.
 
-day 2: Creating a few of the components, working mostly on the intro section of the site including the video loop alongside text animation etc.
+Day 2: Creating a few of the components, working mostly on the intro section of the site including the video loop alongside text animation etc.
 
-day 3: Added the animated text and scroll down indicator hint, aswell as changes to the video(found better quality one but i need to cut it up).
+Day 3: Added the animated text and scroll down indicator hint, aswell as changes to the video(found better quality one but i need to cut it up).
 
-day 4: Finishing up the intro portion of the site. Scroll hint actually works now, aswell as better quality and improved sequence of videos. Slight glow and shine animation on Max's logo. 
+Day 4: Finishing up the intro portion of the site. Scroll hint actually works now, aswell as better quality and improved sequence of videos. Slight glow and shine animation on Max's logo. 
 Applied a gradient over the videos for better look visually. Slowly started building the secondary section of the site where the user will scroll to and start seeing some of Max's achievements.
 its.
 
-day 5: Big change is restructuring a bit, created seperate folders for the components/styles for each seperate section. Created the folders and main files for the next 2 sections. Started gathering ideas for said 2 sections.
+Day 5: Big change is restructuring a bit, created seperate folders for the components/styles for each seperate section. Created the folders and main files for the next 2 sections. Started gathering ideas for said 2 sections.
 Fixed the video loop, added a better designed gradient overlay that follows the cursor, aswell as a grainy noise overlay. Added a transition where once you start scrolling the video background blurs and slows down slighty, if you scroll back up the video unblurs and goes back to the default speed. 
 Fixed the disappearing scroll hint, and the hint now properly returns after a short delay once you scroll up. Adjustments to the main text and font change (not 100% sure on the font yet but will keep it as is). Will probably go back and add more effects to the text for a nicer feel, but might leave for last touches.
 
-day 6: Intro section is mostly finished as of now, still need to find a way to upscale a bit 2 portions of the video background but that will be done a bit later, will be starting the main work on the secondary page of the site.
+Day 6: Intro section is mostly finished as of now, still need to find a way to upscale a bit 2 portions of the video background but that will be done a bit later, will be starting the main work on the secondary page of the site.
 Fixed up a bit the transition between the intro and the wdc section, now it flows a lot nicer between the two sections with an added black gradient (apart from the video blur and slow on the first section).
 Started structuring and working on the animated counter effect that will show 0 -> 4 wdc's, aswell as photos corresponding to the year which max has won.
 
-day 7: Small changes around the files in the intro portion, aswell as adding a small Red Bull logo that will flash behind the title text when the video goes to black. 
+Day 7: Small changes around the files in the intro portion, aswell as adding a small Red Bull logo that will flash behind the title text when the video goes to black. 
 Finished most of the work on the shared reusable counter component for all the wdc/wins/podiums. Will adjust it more later on depending on the section and all. Its resizing when the numbers change is a bit weird but itll get fixed a bit later on, the important thing is getting the logic to work. 
 Working on a reusable scroll section, which is going to work as a transition point between all the seperate section, it will consist of a "slideshow" sort of effect where a few photos of max will slide by into the screen right to left, and each different use of the section will have seperate photos to shake it up. Intention behind it is to make it usable after every *main* section, and make it so that the different photos have different sizes. Will probably add small description/text around the photos like the year and the race etc.
 Gathered a bunch more photos for the transition sections, sections for the podiums/wins, will need to organize those a lot lol.
 
-day 8: Made it so that if the page is refreshed it goes back to the top automatically. Alongside that, did some small tweaks to the video and the intro section, and now once you have scrolled past the intro, effects such as the noise layer and the animated gradient "turn off" automatically so they dont slow the site down if the user doesn't see them currently.
+Day 8: Made it so that if the page is refreshed it goes back to the top automatically. Alongside that, did some small tweaks to the video and the intro section, and now once you have scrolled past the intro, effects such as the noise layer and the animated gradient "turn off" automatically so they dont slow the site down if the user doesn't see them currently.
 Still gathering photos for the scroll section, but working on its code and functionalities.
 
-day 9: Some work on the scroll transition section, nothing major tho.
+Day 9: Some work on the scroll transition section, nothing major tho.
 
-day 10: More work on the scroll transition section, gathering some photos for it but still figuring it out in terms of code and functionalities. Also separated it from the other shared components as it's shaping up to have quite a few files in order to be reusable between the other sections. 
+Day 10: More work on the scroll transition section, gathering some photos for it but still figuring it out in terms of code and functionalities. Also separated it from the other shared components as it's shaping up to have quite a few files in order to be reusable between the other sections. 
 Added a brief Red Bull logo flash once the intro video fades to black, but will need to find a better photo to use for it, also want to add a very slight shine animation to it, will refine it a bit alongside the scroll section in the next days.
 
-day 11: Will do some more work on the intro video as i want to add more clips to it (with better quality too). Added a new folder where ill add on wips for the later sections as i have very little defined ideas for how those would look currently. Added also files in preparation for a custom scroll bar later on.
+Day 11: Will do some more work on the intro video as i want to add more clips to it (with better quality too). Added a new folder where ill add on wips for the later sections as i have very little defined ideas for how those would look currently. Added also files in preparation for a custom scroll bar later on.
 More work on the scroll transition section, as im trying to figure out its code and functionalities but its currently breaking the site, will need to fix it up and figure it out. Will work on the animation and sizing on it aswell as its far from perfect for now.
+
+Day 12: Scroll section is semi complete now, will need to improve it visually but it can be used for different photos in different places so its good progress so far. Will definitely work more on making each of its uses a bit more different than the other, aswell as gather more photos for each going forward.
+Working on a better intro video loop aswell, as i found more high quality footage that will be cooler to use than the current one so far, will also touch up the small Rb logo flash when the video fades to black, its a smaller thing for now so im leaving it as is but definitely have better ideas for it.
