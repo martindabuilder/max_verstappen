@@ -15,7 +15,6 @@
     justify-content: center;
 }
 
-/* canvas е по-широк от екрана за да побере разпръснатите снимки */
 .scroll-gallery-canvas {
     position: relative;
     width: 100vw;

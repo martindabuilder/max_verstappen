@@ -8,20 +8,33 @@ import img3 from "../assets/images/WDCScrollGallery/img3.jpg";
 import img4 from "../assets/images/WDCScrollGallery/img4.jpg";
 
 /*SC 2*/
+import img5 from "../assets/images/WinsScrollGallery/img1.jpg";
+import img6 from "../assets/images/WinsScrollGallery/img2.jpg";
+import img7 from "../assets/images/WinsScrollGallery/img3.jpg";
+import img8 from "../assets/images/WinsScrollGallery/img4.jpg";
+import img9 from "../assets/images/WinsScrollGallery/img5.jpg";
+
 
 /*SC 3*/
 
 export const scrollGallery1 = {
     images: [
-        { id: 1, src: img1, label: "Bahrain 2021", size: "sm", width: "220px", top: "10vh", left: "4%", rotate: "-3deg", labelPosition: "top", },
-        { id: 2, src: img2, label: "Monaco 2021", size: "lg", width: "400px", top: "20vh", left: "25%", rotate: "2deg", labelPosition: "bottom", },
-        { id: 3, src: img3, label: "label", size: "sm", width: "200px", top: "8vh", left: "60%", rotate: "-1.5deg", labelPosition: "top", },
-        { id: 4, src: img4, label: "label", size: "md", width: "300px", top: "52vh", left: "68%", rotate: "1deg", labelPosition: "bottom", },
+        { id: 1, src: img1, label: "label", size: "sm", width: "220px", top: "10vh", left: "4%", labelPosition: "top", },
+        { id: 2, src: img2, label: "label", size: "lg", width: "400px", top: "20vh", left: "25%", labelPosition: "bottom", },
+        { id: 3, src: img3, label: "label", size: "sm", width: "200px", top: "8vh", left: "60%", labelPosition: "top", },
+        { id: 4, src: img4, label: "label", size: "md", width: "300px", top: "52vh", left: "68%", labelPosition: "bottom", },
     ],
 };
 
 export const scrollGallery2 = {
-  
+  images: [
+        { id: 1, src: img5, label: "label", size: "md", width: "220px", top: "10vh", left: "4%", labelPosition: "top", },
+        { id: 2, src: img6, label: "label", size: "lg", width: "220px", top: "20vh", left: "4%", labelPosition: "bottom", },
+        { id: 3, src: img7, label: "label", size: "md", width: "220px", top: "9vh", left: "4%", labelPosition: "top", },
+        { id: 4, src: img8, label: "label", size: "lg", width: "220px", top: "52vh", left: "4%", labelPosition: "bottom", },
+        { id: 5, src: img9, label: "label", size: "lg", width: "220px", top: "30vh", left: "4%", labelPosition: "top", },
+
+    ],
 };
 
 export const scrollGallery3 = {

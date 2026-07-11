@@ -6,24 +6,20 @@ import { motion, useScroll, useTransform } from "motion/react";
 import "./ScrollGallery.css";
 
 function ScrollGallery({ images = [] }) {
+
     const sectionRef = useRef(null);
-
-    const { scrollYProgress } = useScroll({
-        target: sectionRef,
-        offset: ["start start", "end end"],
-    });
-
-    const x = useTransform(scrollYProgress, [0, 0.5], ["100vw", "0vw"]);
+    const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end end"], });
+    const x = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], ["100vw", "0vw", "0vw", "0vw"]);
 
     return (
-        <section ref={sectionRef} className="scroll-gallery-section">
-            <div className="scroll-gallery-sticky">
-                <motion.div className="scroll-gallery-canvas" style={{ x }}>
+        <section ref={sectionRef} className = "scroll-gallery-section">
+            <div className = "scroll-gallery-sticky">
+                <motion.div className = "scroll-gallery-canvas" style = {{ x }}>
 
                     {images.map((image) => (
-                        <GalleryCard key={image.id} image={image} />
+                        <GalleryCard key = {image.id} image = {image} />
                     ))}
-                    
+
                 </motion.div>
             </div>
         </section>
@@ -33,27 +29,27 @@ function ScrollGallery({ images = [] }) {
 function GalleryCard({ image }) {
   return (
     <div
-      className={`gallery-card-item ${image.size}`}
+      className = {`gallery-card-item ${image.size}`}
         style={{
           position: "absolute",
-          top:      image.top,
-          left:     image.left,
-          width:    image.width,
+          top: image.top,
+          left: image.left,
+          width: image.width,
           transform: `rotate(${image.rotate || "0deg"})`,
         }}>
 
         {image.labelPosition === "top" && (
-          <span className="gallery-label gallery-label--top">
+          <span className = "gallery-label gallery-label--top">
             {image.label}
           </span>
         )}
 
-        <div className="gallery-images">
-          <img src={image.src} alt={image.label} />
+        <div className = "gallery-images">
+          <img src = {image.src} alt = {image.label} />
         </div>
 
         {(!image.labelPosition || image.labelPosition === "bottom") && (
-          <span className="gallery-label gallery-label--bottom">
+          <span className = "gallery-label gallery-label--bottom">
             {image.label}
           </span>
           )}
