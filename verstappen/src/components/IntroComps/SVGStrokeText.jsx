@@ -9,6 +9,11 @@ function SVGStrokeText({ text, fontSize = "clamp(6rem, 18vw, 17.5rem)", delay = 
   const [hovered, setHovered] = useState(false);
   const svgRef = useRef(null);
 
+  const svgWidth = svgRef.current?.getBoundingClientRect().width || 1400;
+  const svgHeight = svgRef.current?.getBoundingClientRect().height || 160;
+  const cx = mousePos.x * (1400 / svgWidth);
+  const cy = mousePos.y * (200 / svgHeight);
+
   const handleMouse = (e) => {
     const rect = svgRef.current.getBoundingClientRect();
     setMousePos({
@@ -18,7 +23,7 @@ function SVGStrokeText({ text, fontSize = "clamp(6rem, 18vw, 17.5rem)", delay = 
   };
 
   return ( 
-    <svg viewBox = "0 0 1400 160" 
+    <svg ref = {svgRef} viewBox = "0 0 1400 160" 
     xmlns = "http://www.w3.org/2000/svg" 
     style = {{ 
       width: "100%", 
@@ -31,23 +36,20 @@ function SVGStrokeText({ text, fontSize = "clamp(6rem, 18vw, 17.5rem)", delay = 
       
       <defs>
         <mask id = "reveal-mask">
-          <rect width = "100%" height = "100%" fill = "white" />
-
+          <rect x = "-50%" y = "-200%" width = "200%" height = "500%" fill = "white" />
           <motion.circle 
-            cx = {mousePos.x * (1400 / (svgRef.current?.getBoundingClientRect().width || 1400))}
-            cy = {mousePos.y * (160 / (svgRef.current?.getBoundingClientRect().height || 160))}
-            r = {hovered ? 200 : 0}
+            cx = {cx}
+            cy = {cy}
             fill = "black"
-            style = {{ transition: "r 0.3 ease" }}
+            animate = {{ r : hovered ? 200 : 0 }}
+            transition = {{ duration: 0.3, ease: "easeOut" }}
           />
-
         </mask>
       </defs>
 
       {/*handles the main text drawing portion, aswell as its outline*/}
       <motion.text 
-        x = "50%" 
-        y = "100" 
+        x = "50%" y = "100" 
         textAnchor = "middle" 
         dominantBaseline="middle" 
         fontFamily = 'Anton SC Static' 
@@ -59,27 +61,24 @@ function SVGStrokeText({ text, fontSize = "clamp(6rem, 18vw, 17.5rem)", delay = 
         initial = {{ strokeDasharray: 3000, strokeDashoffset: 3000, }} 
         animate = {{ strokeDashoffset: 0, }} 
         transition = {{ duration: 3, ease: "easeInOut", delay, }}> 
-
-        {text} 
-
+          {text} 
       </motion.text> 
        
       {/*handles the "fill" animation*/}
       <motion.text 
-        x = "50%" 
-        y = "99" 
+        x = "50%" y = "100" 
         textAnchor = "middle" 
         dominantBaseline="middle" 
         fontFamily = 'Anton SC Static' 
         fontSize = {fontSize} 
         fill = "rgb(239, 235, 199)" 
+
         mask = "url(#reveal-mask)"
+
         initial = {{ opacity: 0 }} 
         animate = {{ opacity: 1 }} 
         transition = {{ duration: 0.5, delay: 4.5, }}> 
-        
-        {text} 
-     
+          {text} 
       </motion.text> 
     </svg> 
   ); 
