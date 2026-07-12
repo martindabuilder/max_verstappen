@@ -35,7 +35,6 @@
 
 .gallery-images {
   overflow: hidden;
-  border-radius: 12px;
   width: 100%;
 }
 
@@ -52,7 +51,7 @@
 .gallery-card-item.sm .gallery-images { height: 180px; }
 .gallery-card-item.md .gallery-images { height: 300px; }
 .gallery-card-item.lg .gallery-images { height: 440px; }
-.gallery-card-item.tall .gallery-images { height: 540px; }
+.gallery-card-item.tall .gallery-images { height: 640px; }
 
 .gallery-label {
   font-size: 0.68rem;

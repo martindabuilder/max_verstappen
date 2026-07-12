@@ -90,4 +90,7 @@ Day 12: Scroll section is semi complete now, will need to improve it visually bu
 Made a better intro video loop aswell, as i found better high quality footage that are a lot cooler to use than the previous one, will also touch up the small RB logo flash when the video fades to black, its a smaller thing for now so im leaving it as is but definitely have better ideas for it.
 Starting some rough work on a custom scroll bar for the top of the site aswell.
 
-Day 13:
+Day 13: Mostly fixed up the scroll section, will definitely touch up here and there but its functional which is good, changed up some stuff about the intro portion as, as i changed the video a bit, slight tweaks to the gradient/noise overlay, as well as more work on the intro text and its effects. 
+Added a custom scrollbar, as it is now it looks good enough ill see if i change it up or add more to it going forward.
+Changed the RB logo photo to a better one and touched up the animation and size on that too.
+Started slowly doing proper design cocepts for the main sections as those will be more complicated, so coding will take a bit of a backseat for a few days on this one. The concepts once done will be uploaded to the design_ideas folder.
