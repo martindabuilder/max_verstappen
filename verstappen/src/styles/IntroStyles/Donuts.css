@@ -36,9 +36,19 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 30%;
-    background: linear-gradient(to bottom, transparent, black);
+    height: 60%;
+
+    background: linear-gradient(
+        to bottom, 
+        transparent 0%,
+        transparent 20%,
+        rgba(0,0,0,0.3) 50%,
+        rgba(0,0,0,0.7) 75%,
+        black 100%
+        );
+
     pointer-events: none;
+    z-index: 8;
 }
 
 .scroll-fade-overlay {
@@ -58,7 +68,7 @@
   height: 100%;
 
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 0.35;
   mix-blend-mode: multiply;
 
   z-index: 3;
