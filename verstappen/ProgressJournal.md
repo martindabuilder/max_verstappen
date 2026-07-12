@@ -12,6 +12,9 @@ documentations and other online references:
 [Horizontal scroll section](https://motion.dev/docs/react-scroll-animations)
 [lenis.dev](https://www.lenis.dev/)
 [CSS The overflow Property](https://www.w3schools.com/css/css_overflow.asp)
+[CSS scrollbars styling](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scrollbars_styling)
+[React Scroll Effects Without External Libraries](https://dev.to/childrentime/react-scroll-effects-without-external-libraries-2k12)
+[<easing-function> CSS type - MDN Web Docs - Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/easing-function)
 
 Text animations:
 [Scroll Reveal](https://reactbits.dev/text-animations/scroll-reveal)
@@ -27,28 +30,19 @@ gradients and noise:
 
 youtube videos i used for either reference/inspiration/code:
 [Page Transitions- developedbyed](https://www.youtube.com/watch?v=S4HYwsBRpRs)
-
 [CSS Morphing Gradients Animated Background - WeCoded](https://youtu.be/Ml-B-W91gtw?si=7O2-4uc3bArIu8Rd)
-
 [Animated noise with CSS only shouldnt be possible!](https://www.youtube.com/watch?v=SxFNqnSOgh0)
 [React Animation Course with Motion - Become an Animations Pro in 1 Hour](https://www.youtube.com/watch?v=9-fO_2xTpgY)
-
-
 [React Native Animated Counter](https://www.youtube.com/watch?v=Rv91NdVtnsw)
-
-
 [React scroll animation - scroll progress bar](https://motion.dev/docs/react-scroll-animations)
 [Create Full Custom Scrollbar Only CSS](https://youtu.be/ZnzjjlliECk?si=y9c9qCZ9eQ82zVit)
-[CSS scrollbars styling](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scrollbars_styling)
-
-[React Scroll Effects Without External Libraries](https://dev.to/childrentime/react-scroll-effects-without-external-libraries-2k12)
-[<easing-function> CSS type - MDN Web Docs - Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/easing-function)
 [Horizontal Scrolling Animation with React and Framer Motion](https://www.youtube.com/watch?v=4ehYkfh7P-I)
 [Create a Horizontal Scroll Carousel in React with Framer Motion](https://www.youtube.com/watch?v=g8pcxzDl-w8)
 
 fonts:
 [Raleway](https://fonts.google.com/specimen/Raleway?utm_source=chatgpt.com&preview.text=Max%20Verstappen&specimen.preview.text=Max+Verstappen)
 [Birthstrone](https://fonts.google.com/specimen/Birthstone?categoryFilters=Feeling:%2FExpressive%2FFancy&preview.script=Latn)
+[Anton SC](https://fonts.google.com/specimen/Anton+SC?categoryFilters=Feeling:%2FExpressive%2FLoud&preview.script=Latn)
 
 footage:
 [Max Verstappen 2024 4K upscaled scenepack || Made By King F1](https://www.youtube.com/watch?v=i89O-9XJAtg)
@@ -95,3 +89,5 @@ More work on the scroll transition section, as im trying to figure out its code 
 Day 12: Scroll section is semi complete now, will need to improve it visually but it can be used for different photos in different places so its good progress so far. After *a lot* of trial and error the code finally works properly aswell so the main part of the battle is over for now thankfully. Will definitely work more on making each of its uses a bit more different than the other, aswell as gather more photos for each going forward, but good progress for now.
 Made a better intro video loop aswell, as i found better high quality footage that are a lot cooler to use than the previous one, will also touch up the small RB logo flash when the video fades to black, its a smaller thing for now so im leaving it as is but definitely have better ideas for it.
 Starting some rough work on a custom scroll bar for the top of the site aswell.
+
+Day 13:

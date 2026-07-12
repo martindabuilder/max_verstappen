@@ -10,7 +10,7 @@ function Intro_text() {
 
       <SVGStrokeText
         text="Max Verstappen"
-        fontSize = {230}
+        fontSize="clamp(6rem, 18vw, 17.5rem)"
         delay = {3}/>
 
       <motion.p
@@ -18,7 +18,7 @@ function Intro_text() {
         initial = {{ opacity: 0, y: 10 }}
         animate = {{ opacity: 1, y: 0 }}
         transition = {{
-          duration: 0.9,
+          duration: 1,
           delay: 4.3,
         }}>
             

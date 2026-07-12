@@ -7,9 +7,10 @@ import Wins from './components/WinsComps/WinsSection.jsx'
 import Podiums from './components/PodiumsComps/PodiumsSection.jsx'
 import Ending from './components/EndingComps/EndingSection.jsx'
 
+/*
+shared elements imports */
 import ScrollGallery from './shared/ScrollGallery.jsx'
 import { scrollGallery1, scrollGallery2, scrollGallery3 } from './data/ScrollGalleryData.jsx'
-
 import ScrollBar from './shared/ScrollBar.jsx'
 
 import './styles/App.css'
