@@ -1,12 +1,18 @@
-.scrollbar {
+.scroll-bar {
     position: fixed;
-    background-color: blue;
+    background: linear-gradient(
+    to right,
+    rgb(24, 24, 92),
+    rgb(79, 40, 218)
+    );
     
-    height: 3px;
+    height: 4px;
 
     top: 0;
     left: 0;
     right: 0;
+
+    transform-origin: left;
 
     z-index: 9999;
 }

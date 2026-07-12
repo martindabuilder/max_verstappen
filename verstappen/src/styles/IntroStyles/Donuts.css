@@ -1,6 +1,6 @@
 .donuts {
     position: relative;
-    overflow: visible;
+    overflow: hidden;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -30,14 +30,21 @@
 }
 
 /*black gradient fade once the video is scrolled down*/
+.donuts::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(to bottom, transparent, black);
+    pointer-events: none;
+}
+
 .scroll-fade-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to bottom,
-        transparent 40%,
-        black 100%
-    );
+    background: black 100%;
     pointer-events: none;
     z-index: 3;
     transition: opacity 0.1s ease-out;
@@ -81,7 +88,7 @@
         radial-gradient(
             circle at calc(50% + var(--x)) calc(30% + var(--y)),
             rgba(21, 60, 253, 0.397),
-            transparent 60%
+            transparent 70%
         ),
 
         radial-gradient(
@@ -99,7 +106,7 @@
 .rb-logo-flash{
     position: absolute;
     transform: translate(-50%, -50%);
-    width: 80%;
+    width: 40%;
     height: auto;
 
     z-index: 5;

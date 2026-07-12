@@ -6,13 +6,11 @@ import img1 from "../assets/images/WDCScrollGallery/img1.jpg";
 import img2 from "../assets/images/WDCScrollGallery/img2.jpg";
 import img3 from "../assets/images/WDCScrollGallery/img3.jpg";
 import img4 from "../assets/images/WDCScrollGallery/img4.jpg";
+import img5 from "../assets/images/WDCScrollGallery/img5.jpg";
+import img6 from "../assets/images/WDCScrollGallery/img6.jpg";
+import img7 from "../assets/images/WDCScrollGallery/img7.jpg";
 
 /*SC 2*/
-import img5 from "../assets/images/WinsScrollGallery/img1.jpg";
-import img6 from "../assets/images/WinsScrollGallery/img2.jpg";
-import img7 from "../assets/images/WinsScrollGallery/img3.jpg";
-import img8 from "../assets/images/WinsScrollGallery/img4.jpg";
-import img9 from "../assets/images/WinsScrollGallery/img5.jpg";
 
 
 /*SC 3*/
@@ -24,16 +22,15 @@ export const scrollGallery1 = {
         { id: 2, src: img2, label: "Monaco 2021",    size: "lg", width: "620px", labelPosition: "bottom" },
         { id: 3, src: img3, label: "Abu Dhabi 2021", size: "lg", width: "620px", labelPosition: "top"    },
         { id: 4, src: img4, label: "Brazil 2022",    size: "lg", width: "680px", labelPosition: "bottom" },
+        { id: 5, src: img5, label: "Brazil 2022",    size: "lg", width: "680px", labelPosition: "bottom" },
+        { id: 6, src: img6, label: "Brazil 2022",    size: "lg", width: "680px", labelPosition: "bottom" },
+        { id: 7, src: img7, label: "Brazil 2022",    size: "lg", width: "680px", labelPosition: "bottom" },
+        
     ]
 };
 
 export const scrollGallery2 = {
     images: [
-        { id: 5, src: img5, label: "Bahrain 2021",   size: "lg", width: "600px", labelPosition: "top"    },
-        { id: 6, src: img6, label: "Monaco 2021",    size: "lg", width: "620px", labelPosition: "bottom" },
-        { id: 7, src: img7, label: "Abu Dhabi 2021", size: "lg", width: "620px", labelPosition: "top"    },
-        { id: 8, src: img8, label: "Brazil 2022",    size: "lg", width: "680px", labelPosition: "bottom" },
-        { id: 9, src: img9, label: "Brazil 2022",    size: "lg", width: "680px", labelPosition: "bottom" },
 
     ]
 };
