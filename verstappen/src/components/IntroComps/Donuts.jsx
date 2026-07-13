@@ -81,7 +81,7 @@ function Donuts() {
 
   /*handles the RB logo flash effect when the video fades out*/
   useEffect(() => {
-    if (!isFading) return;
+    if (!isFading || isInView) return;
 
     setShowRBLogo(true);
     const timer = setTimeout(() => setShowRBLogo(false), 1500);

@@ -7,7 +7,7 @@ import RollingCounter from "../../shared/RollingCounter.jsx";
 import "../../styles/WinsStyles/WinsSection.css";
 
 function WinsSection() {
-    /*Handles the counter going to 4*/
+    /*Handles the counter going to 71*/
     const [count, setCount] = useState(0);
     useEffect(() => {
         const interval = setInterval(() => {

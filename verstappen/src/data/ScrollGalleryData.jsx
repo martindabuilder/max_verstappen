@@ -18,14 +18,13 @@ import img7 from "../assets/images/WDCScrollGallery/img7.jpg";
 
 export const scrollGallery1 = {
     images: [
-        { id: 1, src: img1, label: "Bahrain 2021",   size: "lg", width: "400px", labelPosition: "top"    },
-        { id: 2, src: img2, label: "Monaco 2021",    size: "lg", width: "620px", labelPosition: "bottom" },
-        { id: 3, src: img3, label: "Abu Dhabi 2021", size: "tall", width: "620px", labelPosition: "top"    },
-        { id: 4, src: img4, label: "Brazil 2022",    size: "lg", width: "680px", labelPosition: "bottom" },
-        { id: 5, src: img5, label: "Brazil 2022",    size: "lg", width: "680px", labelPosition: "bottom" },
-        { id: 6, src: img6, label: "Brazil 2022",    size: "tall", width: "680px", labelPosition: "bottom" },
-        { id: 7, src: img7, label: "Brazil 2022",    size: "lg", width: "680px", labelPosition: "bottom" },
-        
+        { id: 1, src: img1, label: "Bahrain 2021",size: "lg", width: "400px", marginTop: "120px", labelPosition: "top"    },
+        { id: 2, src: img2, label: "Monaco 2021", size: "sm", width: "400px", marginTop: "580px", labelPosition: "bottom" },
+        { id: 3, src: img3, label: "Abu Dhabi 2021", size: "tall", width: "620px", marginTop: "120px", labelPosition: "top"    },
+        { id: 4, src: img4, label: "Brazil 2022", size: "lg", width: "680px", marginTop: "50px", labelPosition: "bottom" },
+        { id: 5, src: img5, label: "Brazil 2022", size: "lg", width: "680px", marginTop: "120px", labelPosition: "top" },
+        { id: 6, src: img6, label: "Brazil 2022", size: "tall", width: "680px", marginTop: "120px", labelPosition: "bottom" },
+        { id: 7, src: img7, label: "Brazil 2022", size: "lg", width: "680px", marginTop: "120px", labelPosition: "bottom" },
     ]
 };
 

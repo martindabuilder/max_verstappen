@@ -7,7 +7,7 @@ import RollingCounter from "../../shared/RollingCounter.jsx";
 import "../../styles/PodiumsStyles/PodiumsSection.css";
 
 function PodiumsSection() {
-    /*Handles the counter going to 4*/
+    /*Handles the counter going to 128*/
     const [count, setCount] = useState(0);
     useEffect(() => {
         const interval = setInterval(() => {

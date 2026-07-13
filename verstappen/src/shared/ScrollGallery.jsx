@@ -41,7 +41,7 @@ function ScrollGallery({ images = [] }) {
 
 function GalleryCard({ image }) {
   return (
-    <div className={`gallery-card-item ${image.size}`} style={{ width: image.width }}>
+    <div className={`gallery-card-item ${image.size}`} style={{ width: image.width, marginTop: image.marginTop || "0px", }}>
 
       {image.labelPosition === "top" && (
         <span className="gallery-label gallery-label--top">{image.label}</span>

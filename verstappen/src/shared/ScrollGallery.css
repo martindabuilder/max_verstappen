@@ -18,10 +18,10 @@
 .scroll-gallery-canvas {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   gap: 30px;
-  padding: 0 4rem;
+  padding: 10vh 4rem;
   min-width: max-content;
   height: 100vh;
 }
@@ -43,10 +43,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.7s ease;
 }
-
-.gallery-images:hover img { transform: scale(1.04); }
 
 .gallery-card-item.sm .gallery-images { height: 180px; }
 .gallery-card-item.md .gallery-images { height: 300px; }

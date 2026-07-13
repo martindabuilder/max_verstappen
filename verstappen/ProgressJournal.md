@@ -94,6 +94,5 @@ Changed the RB logo photo to a better one and touched up the animation and size 
 Started slowly doing proper design cocepts for the main sections as those will be more complicated, so coding will take a bit of a backseat for a few days on this one. The concepts once done will be uploaded to the design_ideas folder.
 
 Day 13: Fixed the logo light shine sweep effects on both intro logos. The RB logo works and looks better, while max's logo just looks a bit smoother because the sweep was a little rough looking before.
-
-
-Taskove za denq: da opravq animaciqta vurhu teksta, da dobavq neshto koeto se sluchva s teksta pri scrollvane, da opravq logo animaciqta, da zavursha pone purvata scroll sekciqta nai nakraq, i dokato se izlejavam po nqkoe vreme da subera oshte snimki za drugite dve sekcii i napravo da gi zavursha i tqh ako moga
+Did quite a few touch upts to the intro texts, more effects, smoother transitions and fade outs if the user starts scrolling away. Changes to the behavior of the RB logo aswell so it doesn't flash away constantly or when the user isnt fully in the intro section portion.
+Some reotuching and arranging to the photos of the first scroll gallery.
