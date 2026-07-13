@@ -97,14 +97,14 @@
 
         radial-gradient(
             circle at calc(50% + var(--x)) calc(30% + var(--y)),
-            rgba(21, 60, 253, 0.397),
-            transparent 70%
+            rgba(21, 60, 253, 0.611),
+            transparent 75%
         ),
 
         radial-gradient(
             circle at calc(70% - var(--x)) calc(20% - var(--y)),
             rgba(248, 73, 10, 0.411),
-            transparent 65%
+            transparent 70%
         ),
 
         linear-gradient(
@@ -135,12 +135,15 @@
     inset: 0;
 
     background: linear-gradient(
-        110deg,
+        100deg,
         transparent 0%,
-        transparent 46%,
-        rgba(255, 255, 255, 0.95) 49%,
-        rgba(172, 172, 172, 0.95) 51%,
-        transparent 54%,
+        rgba(210, 155, 133, 0.079) 47%,
+        rgba(163, 124, 108, 0.316) 48%,
+        rgba(249, 224, 124, 0.575) 49%,
+        rgba(249, 224, 124, 0.795) 50%,
+        rgba(249, 224, 124, 0.575) 51%,
+        rgba(163, 124, 108, 0.316) 52%,
+        rgba(210, 155, 133, 0.079) 53%,
         transparent 100%
     );
     background-size: 200% 100%;

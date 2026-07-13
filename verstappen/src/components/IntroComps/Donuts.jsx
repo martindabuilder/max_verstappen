@@ -43,11 +43,8 @@ function Donuts() {
 
     setTimeout(() => {
       video.currentTime = 0;
-
       video.play().catch(console.error);
-
       setIsFading(false);
-
       hasFaded.current = false;
     }, 1800);
   };
@@ -78,13 +75,8 @@ function Donuts() {
   /*pause/plays the video whether the section is/is not in view*/
   useEffect(()=> {
     const video = videoRef.current;
-
-    if (isInView) {
-      video.play().catch(() => {});
-    }
-    else {
-      video.pause();
-    }
+    if (isInView) { video.play().catch(() => {}); }
+    else { video.pause(); }
   }, [isInView]);
 
   /*handles the RB logo flash effect when the video fades out*/
@@ -136,19 +128,19 @@ function Donuts() {
       <AnimatePresence>
         {showRBLogo && (
           <motion.div
-            className="rb-logo-flash"
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}>
+            className = "rb-logo-flash"
+            initial = {{ opacity: 1 }}
+            animate = {{ opacity: 1 }}
+            exit = {{ opacity: 0 }}
+            transition = {{ duration: 0.3, delay: 0}}>
 
-            <img src={RBLogo} className="rb-logo-img" />
+            <img src = {RBLogo} className="rb-logo-img" />
 
             <motion.div
                 className="rb-sweep"
-                initial={{ backgroundPosition: "0 0" }}
-                animate={{ backgroundPosition: "150% 0" }}
-                transition={{ duration: 0.9, ease: "easeInOut", delay: 0 }}
+                initial = {{ backgroundPosition: "-70% 0" }}
+                animate = {{ backgroundPosition: "150% 0" }}
+                transition = {{ duration: 0.7, ease: "easeIn", delay: 0 }}
             />
           </motion.div>
           )}
