@@ -7,9 +7,12 @@
     flex-direction: column;
     display: flex;
 
-    color:rgb(241, 246, 194);
+    color:rgb(176, 178, 224);
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.1rem;
+
+    will-change: opacity, transform, filter;
+
     z-index: 10;
 }
 
@@ -17,8 +20,8 @@
     width: 12px;
     height: 12px;
 
-    border-right: 2px solid rgb(241, 246, 194);
-    border-bottom: 2px solid rgb(241, 246, 194);
+    border-right: 2px solid rgb(176, 178, 224);;
+    border-bottom: 2px solid rgb(176, 178, 224);;
 
     margin-top: 1px;
     z-index: 2;

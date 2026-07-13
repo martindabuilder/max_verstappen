@@ -13,7 +13,7 @@ function ScrollGallery({ images = [] }) {
   const sectionHeight = shiftLeft > 0 ? `${window.innerHeight + shiftLeft}px` : "100vh";
 
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end end"], });
-  const x = useTransform(scrollYProgress, [0, 1], [2500, -shiftLeft]);
+  const x = useTransform(scrollYProgress, [0, 1], [3250, -shiftLeft]);
 
   useLayoutEffect(() => {
     if (!canvasRef.current || !sectionRef.current) return;

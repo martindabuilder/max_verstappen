@@ -23,13 +23,9 @@ function ScrollHint() {
             const currentScrollY = window.scrollY;
             const last = lastScrollY.current;
 
-            if (currentScrollY > last) {
-                setShowHint(false);
-            }
+            if (currentScrollY > last + 5) { setShowHint(false); }
 
-            if (currentScrollY < last) {
-                setShowHint(true);
-            }
+            if (currentScrollY < last) { setShowHint(true); }
 
             lastScrollY.current = currentScrollY;
         };
@@ -44,10 +40,10 @@ function ScrollHint() {
             {showHint && (
                 <motion.div
                     className = "scroll-hint"
-                    initial = {{ opacity: 0, y: -10 }}
-                    animate = {{ opacity: 1, y: 0 }}
-                    exit = {{ opacity: 0, y: 20 }}
-                    transition = {{ duration: 2 }}>
+                    initial = {{ opacity: 0, y: -10, filter: "blur(10px)" }}
+                    animate = {{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    exit = {{ opacity: 0, y: -40, filter: "blur(10px)" }}
+                    transition = {{ duration: 2, ease: "easeOut" }}>
 
                         <p>Scroll to continue</p>
 
@@ -56,12 +52,7 @@ function ScrollHint() {
                         className = "arrow"
                         style = {{ rotate: 45 }}
                         animate = {{ y: [0, 7, 0] }}
-                        transition = {{
-                            repeat: Infinity,
-                            ease: "easeInOut",
-                            duration: 2,
-                        }}>
-
+                        transition = {{ repeat: Infinity, ease: "easeInOut", duration: 2, }}>
                     </motion.div>
                 </motion.div>
             )}

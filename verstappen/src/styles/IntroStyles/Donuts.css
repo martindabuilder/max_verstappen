@@ -137,13 +137,9 @@
     background: linear-gradient(
         100deg,
         transparent 0%,
-        rgba(210, 155, 133, 0.079) 47%,
-        rgba(163, 124, 108, 0.316) 48%,
         rgba(249, 224, 124, 0.575) 49%,
         rgba(249, 224, 124, 0.795) 50%,
         rgba(249, 224, 124, 0.575) 51%,
-        rgba(163, 124, 108, 0.316) 52%,
-        rgba(210, 155, 133, 0.079) 53%,
         transparent 100%
     );
     background-size: 200% 100%;

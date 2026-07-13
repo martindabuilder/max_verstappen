@@ -1,87 +1,131 @@
 /*handles the logic behind the "drawn"-like effect for the text*/
 
-import { motion } from "motion/react"; 
-import { useState, useRef } from "react";
+import { motion, useMotionValue, useSpring } from "motion/react";
+import { useState, useRef, useEffect } from "react";
 
-function SVGStrokeText({ text, fontSize = "clamp(6rem, 18vw, 17.5rem)", delay = 1.5 }) { 
-
-  const [mousePos, setMousePos] = useState({x: -999, y: -999});
+function SVGStrokeText({ text, fontSize = "clamp(6rem, 18vw, 17.5rem)", delay = 1.5 }) {
   const [hovered, setHovered] = useState(false);
+  const [mouseActive, setMouseActive] = useState(false);
+
   const svgRef = useRef(null);
+  const hideTimer = useRef(null);
 
-  const svgWidth = svgRef.current?.getBoundingClientRect().width || 1400;
-  const svgHeight = svgRef.current?.getBoundingClientRect().height || 160;
-  const cx = mousePos.x * (1400 / svgWidth);
-  const cy = mousePos.y * (200 / svgHeight);
+  const rawCx = useMotionValue(-999);
+  const rawCy = useMotionValue(-999);
 
+  const cx = useSpring(rawCx, { stiffness: 200, damping: 30 });
+  const cy = useSpring(rawCy, { stiffness: 200, damping: 30 });
+
+  {/* handles the mouse hover where portions of the text disappear */}
   const handleMouse = (e) => {
     const rect = svgRef.current.getBoundingClientRect();
-    setMousePos({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    });
+
+    const svgWidth = rect.width || 1400;
+    const svgHeight = rect.height || 200;
+
+    rawCx.set((e.clientX - rect.left) * (1400 / svgWidth));
+    rawCy.set((e.clientY - rect.top) * (200 / svgHeight));
+
+    setMouseActive(true);
+
+    clearTimeout(hideTimer.current);
+
+    hideTimer.current = setTimeout(() => {
+      setMouseActive(false);
+    }, 200);
   };
 
-  return ( 
-    <svg ref = {svgRef} viewBox = "0 0 1400 160" 
-    xmlns = "http://www.w3.org/2000/svg" 
-    style = {{ 
-      width: "100%", 
-      height: "auto", 
-      overflow: "visible", 
-      cursor: "default" }}
-      onMouseEnter = {() => setHovered(true)}
-      onMouseLeave = {() => {setHovered(false); setMousePos({x: -999, y: -999}); }}
-      onMouseMove = {handleMouse}>
-      
+  useEffect(() => {
+    return () => clearTimeout(hideTimer.current);
+  }, []);
+
+  return (
+    <svg
+      ref={svgRef}
+      viewBox="0 0 1400 200"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{
+        width: "100%",
+        height: "auto",
+        overflow: "visible",
+        cursor: "default"
+      }}
+
+      onMouseEnter={() => {
+        setHovered(true);
+        setMouseActive(true);
+      }}
+
+      onMouseLeave={() => {
+        setHovered(false);
+        setMouseActive(false);
+        rawCx.set(-999);
+        rawCy.set(-999);
+        clearTimeout(hideTimer.current);
+      }}
+      onMouseMove={handleMouse}>
+        
       <defs>
-        <mask id = "reveal-mask">
-          <rect x = "-50%" y = "-200%" width = "200%" height = "500%" fill = "white" />
-          <motion.circle 
-            cx = {cx}
-            cy = {cy}
+        <filter id="blur-mask" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="12" />
+        </filter>
+
+        <mask id="reveal-mask">
+          <rect
+            x="-50%"
+            y="-200%"
+            width="200%"
+            height="500%"
+            fill="white"
+          />
+
+          <motion.circle
+            cx = {cx} cy = {cy}
             fill = "black"
-            animate = {{ r : hovered ? 200 : 0 }}
-            transition = {{ duration: 0.3, ease: "easeOut" }}
+            filter ="url(#blur-mask)"
+            animate = {{ r: hovered && mouseActive ? 120 : 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
           />
         </mask>
       </defs>
 
-      {/*handles the main text drawing portion, aswell as its outline*/}
-      <motion.text 
-        x = "50%" y = "100" 
-        textAnchor = "middle" 
-        dominantBaseline="middle" 
-        fontFamily = 'Anton SC Static' 
-        fontSize = {fontSize} 
-        fill = "none" 
-        stroke = "rgb(239, 235, 199)" 
-        strokeWidth = "2.1" 
-       
-        initial = {{ strokeDasharray: 3000, strokeDashoffset: 3000, }} 
-        animate = {{ strokeDashoffset: 0, }} 
-        transition = {{ duration: 3, ease: "easeInOut", delay, }}> 
-          {text} 
-      </motion.text> 
-       
-      {/*handles the "fill" animation*/}
-      <motion.text 
-        x = "50%" y = "100" 
-        textAnchor = "middle" 
-        dominantBaseline="middle" 
-        fontFamily = 'Anton SC Static' 
-        fontSize = {fontSize} 
-        fill = "rgb(239, 235, 199)" 
+{/*handles the main text outline drawing portion, aswell as its filling later on*/}
+      <motion.text
+        x = "50%" y = "100"
+        textAnchor = "middle"
+        dominantBaseline = "middle"
+        fontFamily = "Anton SC Static"
+        fontSize = {fontSize}
+        fill = "none"
+        stroke = "rgb(255, 255, 255)"
+        strokeWidth = "2.1"
 
+        initial = {{ strokeDasharray: 3000, strokeDashoffset: 3000 }}
+        animate = {{ strokeDashoffset: 0 }}
+        transition = {{ duration: 3, ease: "easeInOut", delay }}>
+
+          {text}
+
+      </motion.text>
+
+      <motion.text
+        x = "50%" y="100"
+        textAnchor = "middle"
+        dominantBaseline = "middle"
+        fontFamily = "Anton SC Static"
+        fontSize = {fontSize}
+        fill = "rgb(255, 255, 255)"
         mask = "url(#reveal-mask)"
 
-        initial = {{ opacity: 0 }} 
-        animate = {{ opacity: 1 }} 
-        transition = {{ duration: 0.5, delay: 4.5, }}> 
-          {text} 
-      </motion.text> 
-    </svg> 
-  ); 
-} 
-    
+        initial = {{ opacity: 0 }}
+        animate = {{ opacity: 1 }}
+        transition = {{  duration: 0.5, delay: 4.5 }}>
+
+          {text}
+
+      </motion.text>
+    </svg>
+  );
+}
+
 export default SVGStrokeText;
