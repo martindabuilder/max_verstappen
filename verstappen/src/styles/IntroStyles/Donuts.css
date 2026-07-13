@@ -113,13 +113,44 @@
 }
 
 /*Red Bull logo flash effect when the video fades out briefly*/
-.rb-logo-flash{
+.rb-logo-flash {
     position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    width: 40%;
-    height: auto;
-
+    width: 25%;
     z-index: 5;
+    pointer-events: none;
+}
+
+.rb-logo-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0;
+}
+
+.rb-sweep {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        110deg,
+        transparent 0%,
+        transparent 46%,
+        rgba(255, 255, 255, 0.95) 49%,
+        rgba(172, 172, 172, 0.95) 51%,
+        transparent 54%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+
+    mask-image: url('/src/assets/images/Intro_images/RBLogo.png');
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: url('/src/assets/images/Intro_images/RBLogo.png');
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
 
     pointer-events: none;
 }

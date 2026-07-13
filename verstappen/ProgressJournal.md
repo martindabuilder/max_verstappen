@@ -78,19 +78,22 @@ Gathered a bunch more photos for the transition sections, sections for the podiu
 Day 8: Made it so that if the page is refreshed it goes back to the top automatically. Alongside that, did some small tweaks to the video and the intro section, and now once you have scrolled past the intro, effects such as the noise layer and the animated gradient "turn off" automatically so they dont slow the site down if the user doesn't see them currently.
 Still gathering photos for the scroll section, but working on its code and functionalities.
 
-Day 9: Some work on the scroll transition section, nothing major tho.
-
-Day 10: More work on the scroll transition section, gathering some photos for it but still figuring it out in terms of code and functionalities. Also separated it from the other shared components as it's shaping up to have quite a few files in order to be reusable between the other sections. 
+Day 9: More work on the scroll transition section, gathering some photos for it but still figuring it out in terms of code and functionalities. Also separated it from the other shared components as it's shaping up to have quite a few files in order to be reusable between the other sections. 
 Added a brief Red Bull logo flash once the intro video fades to black, but will need to find a better photo to use for it, also want to add a very slight shine animation to it, will refine it a bit alongside the scroll section in the next days.
 
-Day 11: Will do some more work on the intro video as i want to add more clips to it (with better quality too). Added a new folder where ill add on wips for the later sections as i have very little defined ideas for how those would look currently. Added also files in preparation for a custom scroll bar later on.
+Day 10: Will do some more work on the intro video as i want to add more clips to it (with better quality too). Added a new folder where ill add on wips for the later sections as i have very little defined ideas for how those would look currently. Added also files in preparation for a custom scroll bar later on.
 More work on the scroll transition section, as im trying to figure out its code and functionalities but its currently breaking the site, will need to fix it up and figure it out. Will work on the animation and sizing on it aswell as its far from perfect for now.
 
-Day 12: Scroll section is semi complete now, will need to improve it visually but it can be used for different photos in different places so its good progress so far. After *a lot* of trial and error the code finally works properly aswell so the main part of the battle is over for now thankfully. Will definitely work more on making each of its uses a bit more different than the other, aswell as gather more photos for each going forward, but good progress for now.
+Day 11: Scroll section is semi complete now, will need to improve it visually but it can be used for different photos in different places so its good progress so far. After *a lot* of trial and error the code finally works properly aswell so the main part of the battle is over for now thankfully. Will definitely work more on making each of its uses a bit more different than the other, aswell as gather more photos for each going forward, but good progress for now.
 Made a better intro video loop aswell, as i found better high quality footage that are a lot cooler to use than the previous one, will also touch up the small RB logo flash when the video fades to black, its a smaller thing for now so im leaving it as is but definitely have better ideas for it.
 Starting some rough work on a custom scroll bar for the top of the site aswell.
 
-Day 13: Mostly fixed up the scroll section, will definitely touch up here and there but its functional which is good, changed up some stuff about the intro portion as, as i changed the video a bit, slight tweaks to the gradient/noise overlay, as well as more work on the intro text and its effects. 
+Day 12: Mostly fixed up the scroll section, will definitely touch up here and there but its functional which is good, changed up some stuff about the intro portion as, as i changed the video a bit, slight tweaks to the gradient/noise overlay, as well as more work on the intro text and its effects. 
 Added a custom scrollbar, as it is now it looks good enough ill see if i change it up or add more to it going forward.
 Changed the RB logo photo to a better one and touched up the animation and size on that too.
 Started slowly doing proper design cocepts for the main sections as those will be more complicated, so coding will take a bit of a backseat for a few days on this one. The concepts once done will be uploaded to the design_ideas folder.
+
+Day 13: Fixed the logo light shine sweep effects on both intro logos. The RB logo works and looks better, while max's logo just looks a bit smoother because the sweep was a little rough looking before.
+
+
+Taskove za denq: da opravq animaciqta vurhu teksta, da dobavq neshto koeto se sluchva s teksta pri scrollvane, da opravq logo animaciqta, da zavursha pone purvata scroll sekciqta nai nakraq, i dokato se izlejavam po nqkoe vreme da subera oshte snimki za drugite dve sekcii i napravo da gi zavursha i tqh ako moga

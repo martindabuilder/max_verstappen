@@ -92,7 +92,7 @@ function Donuts() {
     if (!isFading) return;
 
     setShowRBLogo(true);
-    const timer = setTimeout(() => setShowRBLogo(false), 500);
+    const timer = setTimeout(() => setShowRBLogo(false), 1500);
 
     return () => clearTimeout(timer);
   }, [isFading]);
@@ -128,23 +128,30 @@ function Donuts() {
 
       <div
         className="scroll-fade-overlay"
-        style={{ opacity: scrollOpacity }}
-      />
+        style={{ opacity: scrollOpacity }}/>
 
       <NoiseOverlay enabled = {isInView}/>
       <IntroGradient enabled = {isInView}/>
 
       <AnimatePresence>
         {showRBLogo && (
-          <motion.img
-            src={RBLogo}
-            alt="RB"
+          <motion.div
             className="rb-logo-flash"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 0.30, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.05 }}
-            transition={{ duration: 0.8, ease: "ease" }}/>
-        )}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}>
+
+            <img src={RBLogo} className="rb-logo-img" />
+
+            <motion.div
+                className="rb-sweep"
+                initial={{ backgroundPosition: "0 0" }}
+                animate={{ backgroundPosition: "150% 0" }}
+                transition={{ duration: 0.9, ease: "easeInOut", delay: 0 }}
+            />
+          </motion.div>
+          )}
       </AnimatePresence>
       
       <ScrollHint />
