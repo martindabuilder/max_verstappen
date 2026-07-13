@@ -21,7 +21,9 @@ function Donuts() {
   const [showRBLogo, setShowRBLogo] = useState(false);
   const [scrollOpacity, setScrollOpacity] = useState(0);
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, {amount: 0.1,});
+  const isInView = useInView(sectionRef, {amount: 0.1});
+  const isRBLogoInView = useInView(sectionRef, {amount: 0.9});
+  const logoScrollCancelled = useRef(false);
 
   /*handles the looping of the video*/
   const handleTimeUpdate = () => {
@@ -36,12 +38,15 @@ function Donuts() {
   };
 
   /*handles the video repeating and the black background that follows after it*/
+  /*also includes the flag reset for the RB logo if the scroll gets canceled */
   const handleVideoEnd = () => {
     const video = videoRef.current;
 
     if (!video) return;
 
     setTimeout(() => {
+      logoScrollCancelled.current =  false;
+
       video.currentTime = 0;
       video.play().catch(console.error);
       setIsFading(false);
@@ -59,16 +64,15 @@ function Donuts() {
       const easedProgress = 1 - Math.pow(1 - progress, 2.2);
 
       if (video) {
-        video.style.filter    = `blur(${easedProgress * 12}px)`;
+        video.style.filter = `blur(${easedProgress * 12}px)`;
         video.style.transform = `scale(${1.3 + easedProgress * 0.08})`;
-        video.playbackRate    = Math.max(1 - easedProgress * 0.9, 0.7);
+        video.playbackRate = Math.max(1 - easedProgress * 0.9, 0.7);
       }
 
       setScrollOpacity(easedProgress);
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
-
     return () => window.removeEventListener("scroll", onScroll);
   }, [isInView]);
 
@@ -80,14 +84,27 @@ function Donuts() {
   }, [isInView]);
 
   /*handles the RB logo flash effect when the video fades out*/
-  useEffect(() => {
-    if (!isFading || isInView) return;
+  useEffect(() =>{
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        logoScrollCancelled.current = true;
+        setShowRBLogo(false);
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [])
+
+  useEffect(() => {
+    if (!isFading || !isRBLogoInView || logoScrollCancelled.current) return;
     setShowRBLogo(true);
-    const timer = setTimeout(() => setShowRBLogo(false), 1500);
+
+    const timer = setTimeout(() => { setShowRBLogo(false) }, 1500);
 
     return () => clearTimeout(timer);
-  }, [isFading]);
+  }, [isFading, isRBLogoInView]);
+
 
 
   return (
@@ -126,7 +143,7 @@ function Donuts() {
       <IntroGradient enabled = {isInView}/>
 
       <AnimatePresence>
-        {showRBLogo && (
+        {showRBLogo && isRBLogoInView && (
           <motion.div
             className = "rb-logo-flash"
             initial = {{ opacity: 1 }}

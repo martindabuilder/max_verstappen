@@ -94,5 +94,5 @@ Changed the RB logo photo to a better one and touched up the animation and size 
 Started slowly doing proper design cocepts for the main sections as those will be more complicated, so coding will take a bit of a backseat for a few days on this one. The concepts once done will be uploaded to the design_ideas folder.
 
 Day 13: Fixed the logo light shine sweep effects on both intro logos. The RB logo works and looks better, while max's logo just looks a bit smoother because the sweep was a little rough looking before.
-Did quite a few touch upts to the intro texts, more effects, smoother transitions and fade outs if the user starts scrolling away. Changes to the behavior of the RB logo aswell so it doesn't flash away constantly or when the user isnt fully in the intro section portion.
+Did quite a few touch upts to the intro text: more effects, smoother transitions and fade outs if the user starts scrolling away. Changes to the behavior of the RB logo aswell so it doesn't flash away constantly, or when the user isnt fully in the intro section portion, and if it so happens that the users starts scrolling up down nonstop, once the logo gets hidden away even if its mid animation, that way it doesnt get shown until the page becomes fully visible and the video doesnt loop entirely.
 Some reotuching and arranging to the photos of the first scroll gallery.
