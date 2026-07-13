@@ -7,9 +7,9 @@
     flex-direction: column;
     display: flex;
 
-    color:rgb(176, 178, 224);
+    color: rgb(176, 178, 224);
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 1vw + 0.8rem, 1.3rem);
 
     will-change: opacity, transform, filter;
 
@@ -17,13 +17,12 @@
 }
 
 .arrow {
-    width: 12px;
-    height: 12px;
+    width: clamp(1rem, 1vw + 0.7rem, 0.8rem);
+    height: clamp(1rem, 1vw + 0.7rem, 0.8rem);
 
-    border-right: 2px solid rgb(176, 178, 224);;
-    border-bottom: 2px solid rgb(176, 178, 224);;
+    border-right: 1px solid rgb(176, 178, 224);
+    border-bottom: 1px solid rgb(176, 178, 224);
 
     margin-top: 1px;
     z-index: 2;
-
 }

@@ -15,44 +15,31 @@
     width: 350px;
     height: auto;
     display: block;
-    filter: drop-shadow(0 0 6px rgba(255, 100, 30, 0.8)) 
+    filter: drop-shadow(0 0 6px rgba(255, 100, 30, 0.8))
             drop-shadow(0 0 20px rgba(255, 60, 0, 0.4));
 }
 
 .logo-wrapper {
     position: relative;
     display: inline-block;
-    isolation: isolate;
 }
 
-.logo-wrapper::after {
-    content: "";
+.logo-sweep-wrapper {
     position: absolute;
     inset: 0;
-
-    background: linear-gradient(
-        120deg,
-        transparent 0%,
-        rgb(203, 214, 79) 50%,
-        transparent 100%
-    );
-    background-size: 200% 100%;
-    background-position: -100% 0;
-
-    mix-blend-mode: overlay;
-
-    mask-image: url('../../assets/images/Intro_images/MVLogo.png');
-    mask-size: 100% 100%;
-    mask-repeat: no-repeat;
-    -webkit-mask-image: url('../../assets/images/Intro_images/MVLogo.png');
-    -webkit-mask-size: 100% 100%;
-    -webkit-mask-repeat: no-repeat;
-
-    animation: shine 1.1s ease-out 0.2s forwards;
-    pointer-events: none;
+    overflow: hidden;
 }
 
-@keyframes shine {
-    from { background-position: -100%; }
-    to { background-position: 200% ; }
+.logo-sweep {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        100deg,
+        transparent 0%,
+        rgba(203, 214, 79, 0.5) 45%,
+        rgba(203, 214, 79, 0.9) 50%,
+        rgba(203, 214, 79, 0.5) 55%,
+        transparent 100%
+    );
+    pointer-events: none;
 }

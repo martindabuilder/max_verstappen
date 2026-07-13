@@ -86,10 +86,7 @@ function Donuts() {
   /*handles the RB logo flash effect when the video fades out*/
   useEffect(() =>{
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        logoScrollCancelled.current = true;
-        setShowRBLogo(false);
-      }
+      if (window.scrollY > 0) { logoScrollCancelled.current = true; setShowRBLogo(false); }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -104,8 +101,6 @@ function Donuts() {
 
     return () => clearTimeout(timer);
   }, [isFading, isRBLogoInView]);
-
-
 
   return (
     <section ref = {sectionRef} className = "donuts">
@@ -142,32 +137,44 @@ function Donuts() {
       <NoiseOverlay enabled = {isInView}/>
       <IntroGradient enabled = {isInView}/>
 
+      {/* handles the rb logo fade in/out */}
       <AnimatePresence>
-        {showRBLogo && isRBLogoInView && (
+        {showRBLogo && (
           <motion.div
-            className = "rb-logo-flash"
-            initial = {{ opacity: 1 }}
-            animate = {{ opacity: 1 }}
-            exit = {{ opacity: 0 }}
-            transition = {{ duration: 0.3, delay: 0}}>
+            className="rb-logo-flash"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }} >
+              <img src={RBLogo} className="rb-logo-img" 
+          />
 
-            <img src = {RBLogo} className="rb-logo-img" />
+          <div
+            className="rb-sweep-wrapper"
+            style={{
+              maskImage: `url(${RBLogo})`,
+              maskSize: "100% 100%",
+              maskRepeat: "no-repeat",
+              WbkitMaskImage: `url(${RBLogo})`,
+              WebkitMaskSize: "100% 100%",
+              WebkitMaskRepeat: "no-repeat",
+            }}
+          >
 
-            <motion.div
-                className="rb-sweep"
-                initial = {{ backgroundPosition: "-70% 0" }}
-                animate = {{ backgroundPosition: "150% 0" }}
-                transition = {{ duration: 0.7, ease: "easeIn", delay: 0 }}
-            />
-          </motion.div>
-          )}
+          <motion.div
+            className="rb-sweep"
+            initial={{ x: "-100%" }}
+            animate={{ x: "200%" }}
+            transition={{ duration: 0.7, ease: "easeIn", delay: 0.4 }}/>
+          </div>
+        </motion.div>
+        )}
       </AnimatePresence>
       
       <ScrollHint />
       <IntroText />
     </section>
   )
-
 }
 
 export default Donuts;

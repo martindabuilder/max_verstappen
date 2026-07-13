@@ -130,26 +130,22 @@
     opacity: 0;
 }
 
+.rb-sweep-wrapper {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
 .rb-sweep {
     position: absolute;
     inset: 0;
-
     background: linear-gradient(
         100deg,
         transparent 0%,
-        rgba(249, 224, 124, 0.575) 49%,
-        rgba(249, 224, 124, 0.795) 50%,
-        rgba(249, 224, 124, 0.575) 51%,
+        rgba(30, 34, 150, 0.575) 49%,
+        rgba(13, 8, 163, 0.795) 50%,
+        rgba(30, 34, 150, 0.575) 51%,
         transparent 100%
     );
-    background-size: 200% 100%;
-
-    mask-image: url('/src/assets/images/Intro_images/RBLogo.png');
-    mask-size: 100% 100%;
-    mask-repeat: no-repeat;
-    -webkit-mask-image: url('/src/assets/images/Intro_images/RBLogo.png');
-    -webkit-mask-size: 100% 100%;
-    -webkit-mask-repeat: no-repeat;
-
     pointer-events: none;
 }

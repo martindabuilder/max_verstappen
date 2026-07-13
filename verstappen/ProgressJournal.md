@@ -93,6 +93,10 @@ Added a custom scrollbar, as it is now it looks good enough ill see if i change 
 Changed the RB logo photo to a better one and touched up the animation and size on that too.
 Started slowly doing proper design cocepts for the main sections as those will be more complicated, so coding will take a bit of a backseat for a few days on this one. The concepts once done will be uploaded to the design_ideas folder.
 
-Day 13: Fixed the logo light shine sweep effects on both intro logos. The RB logo works and looks better, while max's logo just looks a bit smoother because the sweep was a little rough looking before.
-Did quite a few touch upts to the intro text: more effects, smoother transitions and fade outs if the user starts scrolling away. Changes to the behavior of the RB logo aswell so it doesn't flash away constantly, or when the user isnt fully in the intro section portion, and if it so happens that the users starts scrolling up down nonstop, once the logo gets hidden away even if its mid animation, that way it doesnt get shown until the page becomes fully visible and the video doesnt loop entirely.
-Some reotuching and arranging to the photos of the first scroll gallery.
+Day 13: Fixed the logo light shine sweep effects on both intro logos. The RB logo works and looks better, while max's logo just looks a bit smoother because the sweep was a little rough looking before, the effect is pretty much the same between the two logos just reapplied.
+Did quite a few touch upts to the intro portion, specifically the texts in it: more effects, smoother transitions and fade outs if the user starts scrolling away. The main text's filling dissappears whenever the user hovers onto a particular portion of it, additionally tomorrow will add that same effect for the outline aswell. The scroll hint aswell as the smaller text both fade out aswell once the user scrolls away.
+If the user scrolls back up the texts reappear again.
+Changes to the behavior of the RB logo aswell, not only fixing its flashing animation but it doesn't flash away constantly repeatedly, when the intro section isnt fully visible and/or if it so happens that the users starts scrolling up down nonstop (mid-animation or not) the logo gets hidden until the video restarts, then the logo will pop up again at the end of it.
+Some reotuching and arranging to the photos of the first scroll gallery, will need to figure out the sizes and spaces between all the photos.
+
+Day 14:

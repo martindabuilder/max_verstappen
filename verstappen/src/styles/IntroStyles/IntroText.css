@@ -14,9 +14,9 @@
 .intro-subtitle {
     color: rgb(255, 255, 255);
     white-space: nowrap;
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 1vw + 0.8rem, 1.6rem);
     font-family: 'Space Grotesk', sans-serif;
-    margin-top: 10px;
+    margin-top: clamp(0.5rem, 0.8vw, 1rem);
     z-index: 2;
 }
 
