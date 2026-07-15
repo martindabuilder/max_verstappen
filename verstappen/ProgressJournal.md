@@ -97,6 +97,6 @@ Day 13: Fixed the logo light shine sweep effects on both intro logos. The RB log
 Did quite a few touch upts to the intro portion, specifically the texts in it: more effects, smoother transitions and fade outs if the user starts scrolling away. The main text's filling dissappears whenever the user hovers onto a particular portion of it, additionally tomorrow will add that same effect for the outline aswell. The scroll hint aswell as the smaller text both fade out aswell once the user scrolls away.
 If the user scrolls back up the texts reappear again.
 Changes to the behavior of the RB logo aswell, not only fixing its flashing animation but it doesn't flash away constantly repeatedly, when the intro section isnt fully visible and/or if it so happens that the users starts scrolling up down nonstop (mid-animation or not) the logo gets hidden until the video restarts, then the logo will pop up again at the end of it.
-Some reotuching and arranging to the photos of the first scroll gallery, will need to figure out the sizes and spaces between all the photos.
+Some retouching and arranging to the photos of the first scroll gallery, will need to figure out the sizes and spaces between all the photos.
 
 Day 14:
