@@ -13,7 +13,7 @@ function ScrollGallery({ images = [] }) {
   const sectionHeight = shiftLeft > 0 ? `${window.innerHeight + shiftLeft}px` : "100vh";
 
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end end"], });
-  const x = useTransform(scrollYProgress, [0, 1], [3250, -shiftLeft]);
+  const x = useTransform(scrollYProgress, [0, 1], [window.innerWidth, -shiftLeft - 100]);
 
   useLayoutEffect(() => {
     if (!canvasRef.current || !sectionRef.current) return;
@@ -41,7 +41,7 @@ function ScrollGallery({ images = [] }) {
 
 function GalleryCard({ image }) {
   return (
-    <div className={`gallery-card-item ${image.size}`} style={{ width: image.width, marginTop: image.marginTop || "0px", }}>
+    <div className={`gallery-card-item ${image.size}`} style={{ width: image.width, alignSelf: image.alignSelf || "flex-start", marginRight: image.marginRight || "0px", }}>
 
       {image.labelPosition === "top" && (
         <span className="gallery-label gallery-label--top">{image.label}</span>
