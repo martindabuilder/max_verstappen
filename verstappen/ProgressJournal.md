@@ -99,4 +99,5 @@ If the user scrolls back up the texts reappear again.
 Changes to the behavior of the RB logo aswell, not only fixing its flashing animation but it doesn't flash away constantly repeatedly, when the intro section isnt fully visible and/or if it so happens that the users starts scrolling up down nonstop (mid-animation or not) the logo gets hidden until the video restarts, then the logo will pop up again at the end of it.
 Some retouching and arranging to the photos of the first scroll gallery, will need to figure out the sizes and spaces between all the photos.
 
-Day 14:
+Day 14: Added a bunch more photos for the second scroll section.
+Adjusted and improved the alignment of the photos in the sections, now pretty much everything for their position can be controlled. Still need to plan out and align all the photos but that will be done more easliy now. Will work on some sort of reveal text effect for the label text under each photo.
