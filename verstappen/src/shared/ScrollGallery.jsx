@@ -1,7 +1,7 @@
 /*Reusable scroll section component, 
 will be used inbetween the 3 major sections of the site*/
 
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import "./ScrollGallery.css";
 
@@ -10,19 +10,26 @@ function ScrollGallery({ images = [] }) {
   const sectionRef = useRef(null);
   const canvasRef = useRef(null);
   const [shiftLeft, setShiftLeft] = useState(0);
-  const sectionHeight = shiftLeft > 0 ? `${window.innerHeight + shiftLeft}px` : "100vh";
+  const [startX, setStartX] = useState(window.innerWidth);
+
+  const sectionHeight = shiftLeft > 0 ? `${window.innerHeight + shiftLeft + window.innerWidth}px` : "300vh";
 
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end end"], });
-  const x = useTransform(scrollYProgress, [0, 1], [window.innerWidth, -shiftLeft - 100]);
+  const x = useTransform(scrollYProgress, [0, 1], [window.innerWidth, -shiftLeft ]);
 
-  useLayoutEffect(() => {
+
+useEffect(() => {
+  const calc = () => {
     if (!canvasRef.current || !sectionRef.current) return;
 
-    const canvasWidth  = canvasRef.current.scrollWidth;
+    const canvasWidth = canvasRef.current.scrollWidth;
     const sectionWidth = sectionRef.current.offsetWidth;
+    const overflow = Math.max(0, canvasWidth - sectionWidth);
 
-    setShiftLeft(Math.max(0, canvasWidth - sectionWidth));
-  }, [images]);
+    setShiftLeft(overflow);
+    setStartX(canvasWidth + window.innerWidth);
+  }
+}, [images]);
 
   return (
     <section ref={sectionRef} className="scroll-gallery-section" style={{ height: sectionHeight }}>
