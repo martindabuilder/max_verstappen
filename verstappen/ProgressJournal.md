@@ -101,3 +101,5 @@ Some retouching and arranging to the photos of the first scroll gallery, will ne
 
 Day 14: Added a bunch more photos for the second scroll section.
 Adjusted and improved the alignment of the photos in the sections, now pretty much everything for their position can be controlled. Still need to plan out and align all the photos but that will be done more easliy now. Will work on some sort of reveal text effect for the label text under each photo.
+
+Day 15: I feel like im going crazy with the scroll section its so dumb how much time and nerves ive spent on it for real.

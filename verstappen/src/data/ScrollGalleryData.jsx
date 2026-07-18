@@ -24,7 +24,7 @@ export const scrollGallery1 = {
         { id: 4, src: img4, label: "Brazil 2022", size: "lg", width: "680px", alignSelf: "flex-start", marginRight: "40px", labelPosition: "bottom" },
         { id: 5, src: img5, label: "Brazil 2022", size: "lg", width: "680px", alignSelf: "flex-end", marginRight: "40px", labelPosition: "top" },
         { id: 6, src: img6, label: "Brazil 2022", size: "tall", width: "680px", alignSelf: "center", marginRight: "40px", labelPosition: "bottom" },
-        { id: 7, src: img7, label: "Brazil 2022", size: "lg", width: "680px", alignSelf: "flex-start", marginRight: "0px", labelPosition: "bottom" },
+        { id: 7, src: img7, label: "last photo test", size: "lg", width: "680px", alignSelf: "flex-start", marginRight: "0px", labelPosition: "bottom" },
     ],
 };
 

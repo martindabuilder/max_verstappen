@@ -17,20 +17,6 @@ function ScrollGallery({ images = [] }) {
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end end"], });
   const x = useTransform(scrollYProgress, [0, 1], [window.innerWidth, -shiftLeft ]);
 
-
-useEffect(() => {
-  const calc = () => {
-    if (!canvasRef.current || !sectionRef.current) return;
-
-    const canvasWidth = canvasRef.current.scrollWidth;
-    const sectionWidth = sectionRef.current.offsetWidth;
-    const overflow = Math.max(0, canvasWidth - sectionWidth);
-
-    setShiftLeft(overflow);
-    setStartX(canvasWidth + window.innerWidth);
-  }
-}, [images]);
-
   return (
     <section ref={sectionRef} className="scroll-gallery-section" style={{ height: sectionHeight }}>
       <div className="scroll-gallery-sticky">
