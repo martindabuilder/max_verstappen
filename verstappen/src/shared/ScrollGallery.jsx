@@ -6,16 +6,57 @@ import { motion, useScroll, useTransform } from "motion/react";
 import "./ScrollGallery.css";
 
 function ScrollGallery({ images = [] }) {
-
   const sectionRef = useRef(null);
   const canvasRef = useRef(null);
-  const [shiftLeft, setShiftLeft] = useState(0);
-  const [startX, setStartX] = useState(window.innerWidth);
+  
+  const [canvasWidth, setCanvasWidth] = useState(0);
+  const [viewportWidth, setViewportWidth] = useState(0);
 
-  const sectionHeight = shiftLeft > 0 ? `${window.innerHeight + shiftLeft + window.innerWidth}px` : "300vh";
+  const startOffset = viewportWidth * 1.98;
+  const endOffset = Math.max( 0, canvasWidth - viewportWidth);
+  const totalTravel = startOffset + endOffset;
 
-  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end end"], });
-  const x = useTransform(scrollYProgress, [0, 1], [window.innerWidth, -shiftLeft ]);
+  const sectionHeight = totalTravel > 0 ? `${window.innerHeight + totalTravel}px` : "300vh";
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end end"],});
+  const x = useTransform( scrollYProgress, [0, 1], [startOffset, -endOffset]);
+
+   useEffect(() => {
+    const calculateDimensions = () => {
+      if (!canvasRef.current || !sectionRef.current) return;
+
+      const canvas = canvasRef.current;
+      const section = sectionRef.current;
+
+      setCanvasWidth(canvas.scrollWidth);
+      setViewportWidth(section.clientWidth);
+    };
+
+    const imagesElements = Array.from( canvasRef.current?.querySelectorAll("img") ?? [] );
+
+    const unloadedImages = imagesElements.filter((img) => !img.complete);
+
+    if (unloadedImages.length === 0) {
+       calculateDimensions();
+    } else {
+      let loadedImages = 0;
+
+      const handleImageLoad = () => {
+        loadedImages++;
+        if (loadedImages === unloadedImages.length) {calculateDimensions(); }};
+        unloadedImages.forEach((img) => { img.addEventListener("load", handleImageLoad); }
+      );
+
+      return () => {
+        unloadedImages.forEach((img) => { img.removeEventListener("load", handleImageLoad);});
+      };
+    }
+
+    window.addEventListener("resize", calculateDimensions);
+
+    return () => {
+      window.removeEventListener("resize", calculateDimensions);
+    };
+  }, [images]);
 
   return (
     <section ref={sectionRef} className="scroll-gallery-section" style={{ height: sectionHeight }}>
