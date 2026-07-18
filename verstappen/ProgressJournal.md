@@ -103,3 +103,4 @@ Day 14: Added a bunch more photos for the second scroll section.
 Adjusted and improved the alignment of the photos in the sections, now pretty much everything for their position can be controlled. Still need to plan out and align all the photos but that will be done more easliy now. Will work on some sort of reveal text effect for the label text under each photo.
 
 Day 15: I feel like im going crazy with the scroll section its so dumb how much time and nerves ive spent on it for real. Ive been trying so many different things to make it work and when one end of it works the other doesnt its so dumb.
+The scrolling works a bit better now as the photos get properly hidden before you start scrolling towards them. But i still havent figured out a way to actually make it stop at the spot i want it to. FOr now im leaving it as is and will come back to it later on as im wasting too much time on it currently.
