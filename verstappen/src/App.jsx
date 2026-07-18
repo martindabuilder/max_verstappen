@@ -10,7 +10,7 @@ import Ending from './components/EndingComps/EndingSection.jsx'
 /*
 shared elements imports */
 import ScrollGallery from './shared/ScrollGallery.jsx'
-import { scrollGallery1, scrollGallery2, scrollGallery3 } from './data/ScrollGalleryData.jsx'
+import { scrollGallery1, scrollGallery2} from './data/ScrollGalleryData.jsx'
 import ScrollBar from './shared/ScrollBar.jsx'
 
 import './styles/App.css'
@@ -45,6 +45,7 @@ function App() {
       {/*Podiums Section*/}
       <Podiums />
 
+      {/*ending scroll section */}
       <ScrollGallery images = {scrollGallery2.images} />
 
       {/* Ending portion of the site*/}

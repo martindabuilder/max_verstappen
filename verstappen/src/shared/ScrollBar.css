@@ -1,18 +1,31 @@
 .scroll-bar {
     position: fixed;
-    background: linear-gradient(
-    to right,
-    rgb(24, 24, 92),
-    rgb(79, 40, 218)
-    );
-    
-    height: 4px;
+    top: 20px;
+    bottom: 20px;
+    right: 0;
+    width: 6px;
+    z-index: 9999;
+}
 
+.scroll-track {
+    position: absolute;
+    inset: 0;
+    width: 6px;
+    height: 100%;
+    background: rgba(4, 0, 0, 0.2);
+    border-radius: 999px;
+}
+
+.scroll-bubble {
+    position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-
-    transform-origin: left;
-
-    z-index: 9999;
+    width: 6px;
+    height: 50px;
+    border-radius: 999px;
+    background: linear-gradient(
+        to bottom,
+        rgb(24, 24, 92),
+        rgb(79, 40, 218)
+    );
 }

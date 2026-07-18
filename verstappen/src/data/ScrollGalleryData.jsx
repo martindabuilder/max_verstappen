@@ -39,15 +39,3 @@ export const scrollGallery2 = {
         { id: 7, src: img7, label: "Brazil 2022", size: "lg", width: "680px", alignSelf: "flex-start", marginRight: "0px", labelPosition: "bottom" },
     ],
 };
-
-export const scrollGallery3 = {
-    images: [
-        { id: 1, src: img1, label: "Bahrain 2021", size: "lg", width: "300px", alignSelf: "flex-start", marginRight: "-60px", labelPosition: "top" },
-        { id: 2, src: img2, label: "Monaco 2021", size: "sm", width: "400px", alignSelf: "flex-end", marginRight: "180px", labelPosition: "bottom" },
-        { id: 3, src: img3, label: "Abu Dhabi 2021", size: "tall", width: "620px", alignSelf: "center", marginRight: "40px", labelPosition: "top" },
-        { id: 4, src: img4, label: "Brazil 2022", size: "lg", width: "680px", alignSelf: "flex-start", marginRight: "40px", labelPosition: "bottom" },
-        { id: 5, src: img5, label: "Brazil 2022", size: "lg", width: "680px", alignSelf: "flex-end", marginRight: "40px", labelPosition: "top" },
-        { id: 6, src: img6, label: "Brazil 2022", size: "tall", width: "680px", alignSelf: "center", marginRight: "40px", labelPosition: "bottom" },
-        { id: 7, src: img7, label: "Brazil 2022", size: "lg", width: "680px", alignSelf: "flex-start", marginRight: "0px", labelPosition: "bottom" },
-    ],
-};
