@@ -2,13 +2,13 @@
 contains the logic for the images for the 1st, 2nd and 3rd scroll sections*/
 
 /*SC 1*/
-import img1 from "../assets/images/WDCScrollGallery/img1.jpg";
-import img2 from "../assets/images/WDCScrollGallery/img2.jpg";
-import img3 from "../assets/images/WDCScrollGallery/img3.jpg";
-import img4 from "../assets/images/WDCScrollGallery/img4.jpg";
-import img5 from "../assets/images/WDCScrollGallery/img5.jpg";
-import img6 from "../assets/images/WDCScrollGallery/img6.jpg";
-import img7 from "../assets/images/WDCScrollGallery/img7.jpg";
+import img1 from "../assets/images/ScrollGallery1/img1.jpg";
+import img2 from "../assets/images/ScrollGallery1/img2.jpg";
+import img3 from "../assets/images/ScrollGallery1/img3.jpg";
+import img4 from "../assets/images/ScrollGallery1/img4.jpg";
+import img5 from "../assets/images/ScrollGallery1/img5.jpg";
+import img6 from "../assets/images/ScrollGallery1/img6.jpg";
+import img7 from "../assets/images/ScrollGallery1/img7.jpg";
 
 /*SC 2*/
 

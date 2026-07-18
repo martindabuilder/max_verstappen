@@ -1,11 +1,5 @@
 /*Custom scrollbar component*/
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "motion/react";
-
+import { motion, useScroll, useSpring, useTransform, } from "motion/react";
 import "./ScrollBar.css";
 
 function ScrollBar() {
