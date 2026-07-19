@@ -104,9 +104,15 @@ Day 14: Added a bunch more photos for the second scroll section.
 Adjusted and improved the alignment of the photos in the sections, now pretty much everything for their position can be controlled. Still need to plan out and align all the photos but that will be done more easliy now. Will work on some sort of reveal text effect for the label text under each photo.
 
 Day 15: I feel like im going crazy with the scroll section its so dumb how much time and nerves ive spent on it for real. Ive been trying so many different things to make it work and when one end of it works the other doesnt its so dumb.
-The scrolling works a bit better now as the photos get properly hidden before you start scrolling towards them. But i still havent figured out a way to actually make it stop at the spot i want it to. FOr now im leaving it as is and will come back to it later on as im wasting too much time on it currently. Will still put proper photos on the 2 scroll sections im intending to keep for now and ill do some sort of text reveal animations but man this has been such a pain to figure out.
+The scrolling works a bit better now as the photos get properly hidden before you start scrolling towards them. But i still havent figured out a way to actually make it stop at the spot i want it to. For now im leaving it as is and will come back to it later on as im wasting too much time on it currently. Will still put proper photos on the 2 scroll sections im intending to keep for now and ill do some sort of text reveal animations but man this has been such a pain to figure out.
 Reworked the scroll bar to be a bit more like a standard scroll bar, but still a custom one.
 Removed a few unneeded for the moment folders, images etc.
 
-Day 16: Added a function where the scroll bar is revealed when you scroll, but once you stop it hides away.
-Added a slight disappearing effect when hovering over with the mouse to the outline of the main intro text.
+Day 16: Was busy today and argentina vs spain is happening currently so not too much progress, however: 
+Added a function where the scroll bar is revealed when you scroll, but once you stop it hides away, will work a bit on the scroll ba's bubble intself to look a bit better and maybe have some sort of changing gradient once you have scrolled down (like changing from light to dark blue with a gradient etc).
+Worked on better main intro text sizing and effect, as it now has a slight disappearing effect when hovering over with the mouse to the outline, and its fully fitted into the view box for the hover disappearing effect, so now all parts of the text work with it. 
+Im intending to change the hover effect to be more of a free flowing blob shape follwing the mouse rather than a static circle.
+Will need to work on the text's rescaling so it fits better with screens with different sizes.
+Was looking into animated text reveals for the scroll section but didn't find any i liked/got inspired by any, so i will continue looking into them and implement them tomorrow.
+
+Day 17:
