@@ -43,6 +43,7 @@ function SVGStrokeText({ text, fontSize = "clamp(6rem, 18vw, 17.5rem)", delay = 
     <svg
       ref={svgRef}
       viewBox="0 0 1400 200"
+      preserveAspectRatio="xMidYMid meet"
       xmlns="http://www.w3.org/2000/svg"
       style={{
         width: "100%",
@@ -51,10 +52,7 @@ function SVGStrokeText({ text, fontSize = "clamp(6rem, 18vw, 17.5rem)", delay = 
         cursor: "default"
       }}
 
-      onMouseEnter={() => {
-        setHovered(true);
-        setMouseActive(true);
-      }}
+      onMouseEnter={() => { setHovered(true); setMouseActive(true); }}
 
       onMouseLeave={() => {
         setHovered(false);
@@ -69,6 +67,7 @@ function SVGStrokeText({ text, fontSize = "clamp(6rem, 18vw, 17.5rem)", delay = 
         <filter id="blur-mask" x="-50%" y="-50%" width="200%" height="200%">
           <feGaussianBlur stdDeviation="12" />
         </filter>
+        
 {/*mask for the outline part of the text*/}
       <mask id = "outline-reveal-mask">
         <rect x = "-50%" y = "-200%" width = "200%" height = "500%" fill = "white" />
