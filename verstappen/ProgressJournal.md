@@ -106,3 +106,5 @@ Day 15: I feel like im going crazy with the scroll section its so dumb how much 
 The scrolling works a bit better now as the photos get properly hidden before you start scrolling towards them. But i still havent figured out a way to actually make it stop at the spot i want it to. FOr now im leaving it as is and will come back to it later on as im wasting too much time on it currently. Will still put proper photos on the 2 scroll sections im intending to keep for now and ill do some sort of text reveal animations but man this has been such a pain to figure out.
 Reworked the scroll bar to be a bit more like a standard scroll bar, but still a custom one.
 Removed a few unneeded for the moment folders, images etc.
+
+Day 16:

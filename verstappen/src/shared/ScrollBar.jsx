@@ -1,10 +1,11 @@
 /*Custom scrollbar component*/
 import { motion, useScroll, useSpring, useTransform, } from "motion/react";
 import "./ScrollBar.css";
+import { useState, useEffect } from "react";
 
 function ScrollBar() {
+  const [visibleScroll, setVisibleScroll] = useState(true);
   const { scrollYProgress } = useScroll();
-
   const smoothScroll = useSpring(scrollYProgress, {stiffness: 100, damping: 30, restDelta: 0.001, });
   const bubbleScroll = useTransform(
     smoothScroll,
@@ -16,14 +17,36 @@ function ScrollBar() {
     }
   );
 
+  useEffect(() => {
+    let hideTimeout;
+
+    const handleScroll = () => {
+      setVisibleScroll(true);
+      clearTimeout(hideTimeout);
+
+      hideTimeout = setTimeout(() => {
+        setVisibleScroll(false);
+      }, 150);
+    };
+    
+    window.addEventListener("scroll", handleScroll);
+    return() => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(hideTimeout);
+    };
+  }, []);
+
   return (
-    <div className = "scroll-bar">
+    <motion.div className = "scroll-bar"
+      animate = {{ opacity: visibleScroll ? 1 : 0,}}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+    >
       <div className = "scroll-track" />
       <motion.div
         className = "scroll-bubble"
         style = {{ y: bubbleScroll, }}
       />
-    </div>
+    </motion.div>
   );
 }
 
