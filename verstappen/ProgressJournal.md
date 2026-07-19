@@ -109,3 +109,4 @@ Reworked the scroll bar to be a bit more like a standard scroll bar, but still a
 Removed a few unneeded for the moment folders, images etc.
 
 Day 16: Added a function where the scroll bar is revealed when you scroll, but once you stop it hides away.
+Added a slight disappearing effect when hovering over with the mouse to the outline of the main intro text.
