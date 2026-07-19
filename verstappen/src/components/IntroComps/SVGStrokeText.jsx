@@ -32,7 +32,7 @@ function SVGStrokeText({ text, fontSize = "clamp(6rem, 18vw, 17.5rem)", delay = 
 
     hideTimer.current = setTimeout(() => {
       setMouseActive(false);
-    }, 200);
+    }, 70);
   };
 
   useEffect(() => {
@@ -69,27 +69,30 @@ function SVGStrokeText({ text, fontSize = "clamp(6rem, 18vw, 17.5rem)", delay = 
         <filter id="blur-mask" x="-50%" y="-50%" width="200%" height="200%">
           <feGaussianBlur stdDeviation="12" />
         </filter>
+{/*mask for the outline part of the text*/}
+      <mask id = "outline-reveal-mask">
+        <rect x = "-50%" y = "-200%" width = "200%" height = "500%" fill = "white" />
+        <motion.circle
+        cx = {cx} cy = {cy}
+        fill = "black"
+        filter = "url(#blur-mask)"
+        animate = {{ r : hovered && mouseActive ? 40 : 0 }}
+        transition = {{ duration: 0.2, ease: "easeOut" }}/>
+      </mask>
 
-        <mask id="reveal-mask">
-          <rect
-            x="-50%"
-            y="-200%"
-            width="200%"
-            height="500%"
-            fill="white"
-          />
-
+{/*mask for the fill part of the text*/}
+        <mask id = "reveal-mask">
+          <rect x = "-50%" y = "-200%" width = "200%" height = "500%" fill = "white" />
           <motion.circle
             cx = {cx} cy = {cy}
             fill = "black"
             filter ="url(#blur-mask)"
             animate = {{ r: hovered && mouseActive ? 120 : 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          />
+            transition={{ duration: 0.5, ease: "easeOut" }} />
         </mask>
       </defs>
 
-{/*handles the main text outline drawing portion, aswell as its filling later on*/}
+{/*main text outline drawing portion*/}
       <motion.text
         x = "50%" y = "100"
         textAnchor = "middle"
@@ -99,6 +102,7 @@ function SVGStrokeText({ text, fontSize = "clamp(6rem, 18vw, 17.5rem)", delay = 
         fill = "none"
         stroke = "rgb(255, 255, 255)"
         strokeWidth = "2.1"
+        mask = "url(#outline-reveal-mask)"
 
         initial = {{ strokeDasharray: 3000, strokeDashoffset: 3000 }}
         animate = {{ strokeDashoffset: 0 }}
@@ -108,6 +112,7 @@ function SVGStrokeText({ text, fontSize = "clamp(6rem, 18vw, 17.5rem)", delay = 
 
       </motion.text>
 
+{/*fill in portion of the text*/}
       <motion.text
         x = "50%" y="100"
         textAnchor = "middle"

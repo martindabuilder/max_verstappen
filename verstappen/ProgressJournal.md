@@ -22,6 +22,7 @@ Text animations:
 [Variable Proximity](https://reactbits.dev/text-animations/variable-proximity)
 [prismic css text animations](https://prismic.io/blog/css-text-animations)
 [Count up - reactbits](https://reactbits.dev/text-animations/count-up)
+[Circular Text reactbits](https://reactbits.dev/text-animations/circular-text)
 
 gradients and noise:
 [3d animated gradient with JS and WebGL](https://javascript.plainenglish.io/making-an-animated-html5-canvas-gradient-effect-62e7f84d7c2f)
@@ -107,4 +108,4 @@ The scrolling works a bit better now as the photos get properly hidden before yo
 Reworked the scroll bar to be a bit more like a standard scroll bar, but still a custom one.
 Removed a few unneeded for the moment folders, images etc.
 
-Day 16:
+Day 16: Added a function where the scroll bar is revealed when you scroll, but once you stop it hides away.
