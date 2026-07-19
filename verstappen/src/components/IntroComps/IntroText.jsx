@@ -32,7 +32,7 @@ function Intro_text() {
 
       <SVGStrokeText
         text = "Max Verstappen"
-        fontSize = "clamp(6rem, 18vw, 17.5rem)"
+        fontSize = "clamp(6rem, 17vw, 17rem)"
         delay = {3}
       />
 

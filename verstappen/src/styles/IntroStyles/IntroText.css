@@ -6,7 +6,7 @@
     text-align: center;
     z-index: 10;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
 
     will-change: opacity, filter, margin-top;
 }
@@ -14,9 +14,9 @@
 .intro-subtitle {
     color: rgb(255, 255, 255);
     white-space: nowrap;
-    font-size: clamp(1rem, 1vw + 0.8rem, 1.6rem);
+    font-size: clamp(1rem, 2vw, 2rem);
     font-family: 'Space Grotesk', sans-serif;
-    margin-top: clamp(0.5rem, 0.8vw, 1rem);
+    line-height: 1.2;
     z-index: 2;
 }
 

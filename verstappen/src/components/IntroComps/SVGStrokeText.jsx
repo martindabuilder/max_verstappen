@@ -20,11 +20,11 @@ function SVGStrokeText({ text, fontSize = "clamp(6rem, 18vw, 17.5rem)", delay = 
   const handleMouse = (e) => {
     const rect = svgRef.current.getBoundingClientRect();
 
-    const svgWidth = rect.width || 1400;
-    const svgHeight = rect.height || 200;
+    const svgWidth = rect.width || 1800;
+    const svgHeight = rect.height || 340;
 
-    rawCx.set((e.clientX - rect.left) * (1400 / svgWidth));
-    rawCy.set((e.clientY - rect.top) * (200 / svgHeight));
+    rawCx.set((e.clientX - rect.left) * (1800 / svgWidth));
+    rawCy.set((e.clientY - rect.top) * (340 / svgHeight));
 
     setMouseActive(true);
 
@@ -42,13 +42,13 @@ function SVGStrokeText({ text, fontSize = "clamp(6rem, 18vw, 17.5rem)", delay = 
   return (
     <svg
       ref={svgRef}
-      viewBox="0 0 1400 200"
+      viewBox="0 0 1800 340"
       preserveAspectRatio="xMidYMid meet"
       xmlns="http://www.w3.org/2000/svg"
       style={{
         width: "100%",
         height: "auto",
-        overflow: "visible",
+        overflow: "hidden",
         cursor: "default"
       }}
 
@@ -64,8 +64,8 @@ function SVGStrokeText({ text, fontSize = "clamp(6rem, 18vw, 17.5rem)", delay = 
       onMouseMove={handleMouse}>
         
       <defs>
-        <filter id="blur-mask" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="12" />
+        <filter id = "blur-mask" x = "-50%" y = "-50%" width = "200%" height = "200%">
+          <feGaussianBlur stdDeviation = "12" />
         </filter>
         
 {/*mask for the outline part of the text*/}
@@ -93,7 +93,7 @@ function SVGStrokeText({ text, fontSize = "clamp(6rem, 18vw, 17.5rem)", delay = 
 
 {/*main text outline drawing portion*/}
       <motion.text
-        x = "50%" y = "100"
+        x = "50%" y = "170"
         textAnchor = "middle"
         dominantBaseline = "middle"
         fontFamily = "Anton SC Static"
@@ -113,7 +113,7 @@ function SVGStrokeText({ text, fontSize = "clamp(6rem, 18vw, 17.5rem)", delay = 
 
 {/*fill in portion of the text*/}
       <motion.text
-        x = "50%" y="100"
+        x = "50%" y="170"
         textAnchor = "middle"
         dominantBaseline = "middle"
         fontFamily = "Anton SC Static"
