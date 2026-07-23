@@ -116,4 +116,9 @@ Im intending to change the hover effect to be more of a free flowing blob shape 
 Will need to work on the text's rescaling so it fits better with screens with different sizes.
 Was looking into animated text reveals for the scroll section but didn't find any i liked/got inspired by any, so i will continue looking into them and implement them tomorrow.
 
-Day 17: Added small animation for the text to pop up when an image from the scroll gallery enters. 
+Day 17: Going on vacation so not a lot of progress today but: 
+Added small animation for the text to pop up when an image from the scroll gallery enters. The text enters from the top or bottom depending on the photo's alignment.
+Tweaked a bit the scroll section and now the section ends with the last photo's end, but its a bit of a bandaid fix as it's going to be broken on a different sized screen, so definitely will look into touching it up more. Last step for this section is to pick out better photos in some cases and rearrange it all a bit.
+Planning to work on the rescaling aspect of it since rn its partially broken for mobile-sized screens currently.
+Apart from that ill probably tweak around some small things in the upcoming days(once i come back home that is, stuff like the circle shape that makes the title text disappear i wanna make it a more "dynamic" shape with the disappearing border being like a slight color maybe, wanna add one or two more scenes to the intro video i ended up liking, etc) but the coding part of it will be left alone for a bit since ill now need to work on actual designs for the main sections.
+Will also want to start working on my final year project for uni so there will definitely need to be some balancing between the two alongside drawing lmao.
