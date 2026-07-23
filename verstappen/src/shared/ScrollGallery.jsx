@@ -13,10 +13,10 @@ function ScrollGallery({ images = [] }) {
   const [viewportWidth, setViewportWidth] = useState(0);
 
   const startOffset = viewportWidth * 1.98;
-  const endOffset = Math.max( 0, canvasWidth - viewportWidth);
+  const endOffset = Math.max( 0, canvasWidth - viewportWidth - 1300);
   const totalTravel = startOffset + endOffset;
 
-  const sectionHeight = totalTravel > 0 ? `${window.innerHeight + totalTravel}px` : "300vh";
+  const sectionHeight = `${window.innerHeight + totalTravel}px`;
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end end"],});
   const x = useTransform( scrollYProgress, [0, 1], [startOffset, -endOffset]);
 
@@ -89,7 +89,7 @@ function GalleryCard({ image }) {
           imageObserver.disconnect();
         }
       },
-      { threshold: 0.7, }
+      { threshold: 0.4, }
     )
     imageObserver.observe(currentCard);
     

@@ -57,9 +57,9 @@
 .gallery-card-item.tall .gallery-images { height: 640px; }
 
 .gallery-label {
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   font-family: "Space Grotesk", sans-serif;
-  color: rgb(140, 150, 196);
+  color: rgb(148, 161, 223);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }

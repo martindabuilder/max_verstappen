@@ -2,6 +2,8 @@
 import { useEffect, useState, useRef } from "react";
 import {AnimatePresence, motion } from "motion/react";
 
+import bgimage from "../../assets/images/WDC_images/2020.png"
+
 import championships from "../../data/Championships.jsx";
 
 import RollingCounter from "../../shared/RollingCounter.jsx";

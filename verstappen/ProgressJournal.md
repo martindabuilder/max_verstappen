@@ -39,6 +39,7 @@ youtube videos i used for either reference/inspiration/code:
 [Create Full Custom Scrollbar Only CSS](https://youtu.be/ZnzjjlliECk?si=y9c9qCZ9eQ82zVit)
 [Horizontal Scrolling Animation with React and Framer Motion](https://www.youtube.com/watch?v=4ehYkfh7P-I)
 [Create a Horizontal Scroll Carousel in React with Framer Motion](https://www.youtube.com/watch?v=g8pcxzDl-w8)
+[CSS Gooey Menu V4](https://codepen.io/lbebber/pen/rawQKR)
 
 fonts:
 [Raleway](https://fonts.google.com/specimen/Raleway?utm_source=chatgpt.com&preview.text=Max%20Verstappen&specimen.preview.text=Max+Verstappen)
