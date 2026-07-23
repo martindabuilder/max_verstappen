@@ -39,7 +39,7 @@ function ScrollBar() {
   return (
     <motion.div className = "scroll-bar"
       animate = {{ opacity: visibleScroll ? 1 : 0,}}
-      transition={{ duration: 0.3, ease: "easeInOut" }}
+      transition={{ duration: 1, ease: "easeOut" }}
     >
       <div className = "scroll-track" />
       <motion.div

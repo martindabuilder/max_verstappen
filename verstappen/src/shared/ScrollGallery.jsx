@@ -74,11 +74,49 @@ function ScrollGallery({ images = [] }) {
 }
 
 function GalleryCard({ image }) {
+  const cardRef = useRef(null);
+  const [isLabelVisible, setIsLabelVisible] = useState(false);
+
+  useEffect(() => {
+    const currentCard = cardRef.current;
+
+    if(!currentCard) return;
+
+    const imageObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsLabelVisible(entry.isIntersecting);
+      },
+      {
+        threshold: 0.35,
+      }
+    )
+    imageObserver.observe(currentCard);
+    
+    return () => {imageObserver.disconnect();}
+  }, []);
+
   return (
-    <div className={`gallery-card-item ${image.size}`} style={{ width: image.width, alignSelf: image.alignSelf || "flex-start", marginRight: image.marginRight || "0px", }}>
+    <div ref = {cardRef} className={`gallery-card-item ${image.size}`} style={{ width: image.width, alignSelf: image.alignSelf || "flex-start", marginRight: image.marginRight || "0px", }}>
 
       {image.labelPosition === "top" && (
-        <span className="gallery-label gallery-label--top">{image.label}</span>
+        <motion.span className="gallery-label gallery-label--top" 
+          initial = {{
+            opacity: 0,
+            y: 20,
+          }}
+
+          animate = {{
+            opacity: isLabelVisible ? 1 : 0,
+            y: isLabelVisible ? 0 : 20,
+          }}
+
+          transition = {{
+            duration: 0.6,
+            ease: "easeIn"
+          }}
+        >
+          {image.label}
+        </motion.span>
       )}
 
       <div className="gallery-images">
@@ -86,8 +124,26 @@ function GalleryCard({ image }) {
       </div>
 
       {(!image.labelPosition || image.labelPosition === "bottom") && (
-        <span className="gallery-label gallery-label--bottom">{image.label}</span>
+        <motion.span className="gallery-label gallery-label--bottom" 
+          initial = {{
+            opacity: 0,
+            y: 20,
+          }}
+
+          animate = {{
+            opacity: isLabelVisible ? 1 : 0,
+            y: isLabelVisible ? 0 : 20,
+          }}
+
+          transition = {{
+            duration: 0.6,
+            ease: "easeIn"
+          }}
+        >
+          {image.label}
+        </motion.span>
       )}
+
     </div>
   );
 }

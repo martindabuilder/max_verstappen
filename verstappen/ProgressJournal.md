@@ -115,4 +115,4 @@ Im intending to change the hover effect to be more of a free flowing blob shape 
 Will need to work on the text's rescaling so it fits better with screens with different sizes.
 Was looking into animated text reveals for the scroll section but didn't find any i liked/got inspired by any, so i will continue looking into them and implement them tomorrow.
 
-Day 17:
+Day 17: Added small animation for the text to pop up when an image from the scroll gallery enters. 
