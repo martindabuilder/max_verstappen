@@ -84,11 +84,12 @@ function GalleryCard({ image }) {
 
     const imageObserver = new IntersectionObserver(
       ([entry]) => {
-        setIsLabelVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsLabelVisible(true);
+          imageObserver.disconnect();
+        }
       },
-      {
-        threshold: 0.35,
-      }
+      { threshold: 0.7, }
     )
     imageObserver.observe(currentCard);
     
@@ -96,7 +97,7 @@ function GalleryCard({ image }) {
   }, []);
 
   return (
-    <div ref = {cardRef} className={`gallery-card-item ${image.size}`} style={{ width: image.width, alignSelf: image.alignSelf || "flex-start", marginRight: image.marginRight || "0px", }}>
+    <div className={`gallery-card-item ${image.size}`} style={{ width: image.width, alignSelf: image.alignSelf || "flex-start", marginRight: image.marginRight || "0px", }}>
 
       {image.labelPosition === "top" && (
         <motion.span className="gallery-label gallery-label--top" 
@@ -119,7 +120,7 @@ function GalleryCard({ image }) {
         </motion.span>
       )}
 
-      <div className="gallery-images">
+      <div ref = {cardRef} className="gallery-images">
         <img src={image.src} alt={image.label} />
       </div>
 
@@ -127,12 +128,12 @@ function GalleryCard({ image }) {
         <motion.span className="gallery-label gallery-label--bottom" 
           initial = {{
             opacity: 0,
-            y: 20,
+            y: -20,
           }}
 
           animate = {{
             opacity: isLabelVisible ? 1 : 0,
-            y: isLabelVisible ? 0 : 20,
+            y: isLabelVisible ? 0 : -20,
           }}
 
           transition = {{
